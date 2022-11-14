@@ -28,7 +28,7 @@ namespace VetClinic_DB_APP.View
             try
             {
                 OracleConnection connection = new OracleConnection();
-                string connectStr = "User Id=st64150;Password=vova0107;Data Source=  (DESCRIPTION =\r\n    (ADDRESS = (PROTOCOL = TCP)(HOST = myserver.mycompany.com)(PORT = 1521))\r\n    (CONNECT_DATA =\r\n      (SERVER = DEDICATED)\r\n      (SERVICE_NAME = orcl)\r\n    )\r\n  )";
+                string connectStr = "User Id=****;Password=****;Data Source=  (DESCRIPTION =\r\n    (ADDRESS = (PROTOCOL = TCP)(HOST = myserver.mycompany.com)(PORT = 1521))\r\n    (CONNECT_DATA =\r\n      (SERVER = DEDICATED)\r\n      (SERVICE_NAME = orcl)\r\n    )\r\n  )";
                 connection.ConnectionString = connectStr;
                 connection.Open();
             }
