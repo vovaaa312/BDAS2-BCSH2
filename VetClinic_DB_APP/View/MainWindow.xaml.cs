@@ -27,10 +27,14 @@ namespace VetClinic_DB_APP.View
             InitializeComponent();
             try
             {
-                OracleConnection connection = new OracleConnection();
-                string connectStr = "User Id=****;Password=****;Data Source=  (DESCRIPTION =\r\n    (ADDRESS = (PROTOCOL = TCP)(HOST = myserver.mycompany.com)(PORT = 1521))\r\n    (CONNECT_DATA =\r\n      (SERVER = DEDICATED)\r\n      (SERVICE_NAME = orcl)\r\n    )\r\n  )";
-                connection.ConnectionString = connectStr;
-                connection.Open();
+                string connectionString = "User ID=st64150;Password=vova0107;Data Source=  (DESCRIPTION =\r\n    (ADDRESS = (PROTOCOL = TCP)(HOST = fei-sql1.upceucebny.cz)(PORT = 1521))\r\n    (CONNECT_DATA =\r\n      (SERVER = DEDICATED)\r\n      (SERVICE_NAME = orcl)\r\n    )\r\n  )";
+                string conn = "data source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = fei-sql1.upceucebny.cz)(PORT = 1521)))(CONNECT_DATA =(SID = IDAS)));USER ID=st64150;PASSWORD=vova0107";
+                using (OracleConnection connection = new OracleConnection(conn))
+                {
+                    connection.Open();
+                    Console.WriteLine("ServerVersion: " + connection.ServerVersion
+                        + "\nDataSource: " + connection.DataSource);
+                }
             }
             catch (Exception ex)
             {
