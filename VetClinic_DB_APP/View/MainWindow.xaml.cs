@@ -25,16 +25,31 @@ namespace VetClinic_DB_APP.View
         {
 
             InitializeComponent();
+            //try
+            //{
+            //    string connectionString = "User ID=st64150;Password=vova0107;Data Source=  (DESCRIPTION =\r\n    (ADDRESS = (PROTOCOL = TCP)(HOST = fei-sql1.upceucebny.cz)(PORT = 1521))\r\n    (CONNECT_DATA =\r\n      (SERVER = DEDICATED)\r\n      (SERVICE_NAME = orcl)\r\n    )\r\n  )";
+            //    string conn = "data source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = fei-sql1.upceucebny.cz)(PORT = 1521)))(CONNECT_DATA =(SID = IDAS)));USER ID=st64150;PASSWORD=vova0107";
+            //    using (OracleConnection connection = new OracleConnection(conn))
+            //    {
+            //        connection.Open();
+            //        Console.WriteLine("ServerVersion: " + connection.ServerVersion
+            //            + "\nDataSource: " + connection.DataSource);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
             try
             {
-                string connectionString = "User ID=st64150;Password=vova0107;Data Source=  (DESCRIPTION =\r\n    (ADDRESS = (PROTOCOL = TCP)(HOST = fei-sql1.upceucebny.cz)(PORT = 1521))\r\n    (CONNECT_DATA =\r\n      (SERVER = DEDICATED)\r\n      (SERVICE_NAME = orcl)\r\n    )\r\n  )";
-                string conn = "data source=(DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = fei-sql1.upceucebny.cz)(PORT = 1521)))(CONNECT_DATA =(SID = IDAS)));USER ID=st64150;PASSWORD=vova0107";
-                using (OracleConnection connection = new OracleConnection(conn))
-                {
-                    connection.Open();
-                    Console.WriteLine("ServerVersion: " + connection.ServerVersion
-                        + "\nDataSource: " + connection.DataSource);
-                }
+                string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql1.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=IDAS)));" +
+                        "user id=st64150;password=vova0107;" +
+                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
+
+                OracleConnection con = new OracleConnection(constr);
+                con.Open();
+                Console.WriteLine("Connected to Oracle Database {0}", con.ServerVersion);
             }
             catch (Exception ex)
             {
