@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic_DB_APP", "VetClinic_DB_APP\VetClinic_DB_APP.csproj", "{D4E8F3A8-D289-4DE9-BCD8-60B44D1236BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic", "VetClinic\VetClinic.csproj", "{79457FDC-7A92-4B2B-8021-CF0A760EBAEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D4E8F3A8-D289-4DE9-BCD8-60B44D1236BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4E8F3A8-D289-4DE9-BCD8-60B44D1236BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4E8F3A8-D289-4DE9-BCD8-60B44D1236BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4E8F3A8-D289-4DE9-BCD8-60B44D1236BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79457FDC-7A92-4B2B-8021-CF0A760EBAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79457FDC-7A92-4B2B-8021-CF0A760EBAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79457FDC-7A92-4B2B-8021-CF0A760EBAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79457FDC-7A92-4B2B-8021-CF0A760EBAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

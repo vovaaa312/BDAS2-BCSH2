@@ -1,0 +1,17 @@
+﻿<Window x:Class="VetClinic_DB_APP.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VetClinic_DB_APP.View"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="400" Width="300">
+    <Grid>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="186,262,0,0" VerticalAlignment="Top" Height="29" Width="83"/>
+        <Button Content="Registration" HorizontalAlignment="Left" Margin="33,262,0,0" VerticalAlignment="Top" Width="83" Height="29" RenderTransformOrigin="0.521,0.509"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD"/>
+        <Button Content="Guest" HorizontalAlignment="Left" Margin="239,347,0,0" VerticalAlignment="Top" Height="27" Width="51"/>
+
+    </Grid>
+</Window>
