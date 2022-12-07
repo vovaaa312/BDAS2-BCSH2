@@ -33,14 +33,14 @@ namespace VetClinic_DB_APP.View
 
             OracleConnection con = new OracleConnection(constr);
             con.Open();
-            MessageBox.Show("Connected to Oracle Database " , con.ServerVersion);
+            MessageBox.Show("Connected to Oracle Database", con.ServerVersion);
             
 
             OracleCommand getAllTables = new OracleCommand();
             getAllTables.Connection= con;
             getAllTables.CommandText = "SELECT table_name FROM all_tables\r\nwhere owner = 'ST64150'";
             OracleDataReader reader = getAllTables.ExecuteReader();
-
+            
             if (reader.HasRows) 
             {
                 while (reader.Read()) 

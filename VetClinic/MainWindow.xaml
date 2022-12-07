@@ -17,16 +17,8 @@
                     <TextBlock Text="Text1"/>
                 </TabItem.Header>
             </TabItem>
-            <TabItem Name="Tab2">
-                <TabItem.Header>
-                    <TextBlock Text="Text2"/>
-                </TabItem.Header>
-            </TabItem>
-            <TabItem Name="Tab3">
-                <TabItem.Header>
-                    <TextBlock Text="Text3"/>
-                </TabItem.Header>
-            </TabItem>
+          
+            
         </TabControl>
         <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,0,100,0" SelectionChanged="ListView_SelectionChanged">
             <ListView.View>
