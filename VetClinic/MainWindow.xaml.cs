@@ -40,7 +40,7 @@ namespace VetClinic_DB_APP.View
             getAllTables.Connection= con;
             getAllTables.CommandText = "SELECT table_name FROM all_tables\r\nwhere owner = 'ST64150'";
             OracleDataReader reader = getAllTables.ExecuteReader();
-            
+            //
             if (reader.HasRows) 
             {
                 while (reader.Read()) 
