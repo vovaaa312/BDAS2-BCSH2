@@ -89,7 +89,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Adresa.cs" />
+    <Compile Include="Model\Faktura.cs" />
     <Compile Include="Model\Klinika.cs" />
+    <Compile Include="Model\Krev.cs" />
+    <Compile Include="Model\Majitel.cs" />
+    <Compile Include="Model\Mazlicek.cs" />
+    <Compile Include="Model\Oddeleni.cs" />
+    <Compile Include="Model\PetKarta.cs" />
+    <Compile Include="Model\Veterinar.cs" />
+    <Compile Include="Model\VysledekSluzby.cs" />
+    <Compile Include="Model\Zvire.cs" />
     <Compile Include="View\KlinikaView.xaml.cs">
       <DependentUpon>KlinikaView.xaml</DependentUpon>
     </Compile>
