@@ -11,16 +11,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <TabControl Grid.Row="0" Margin="265,0,-1031,0">
-            <TabItem Name="Tab1">
-                <TabItem.Header>
-                    <TextBlock Text="Text1"/>
-                </TabItem.Header>
-            </TabItem>
-          
-            
-        </TabControl>
-        <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,0,100,0" SelectionChanged="ListView_SelectionChanged">
+        <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,5,139,5" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox HorizontalAlignment="Left" Margin="1253,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="226,5,-1027,5" AutomationProperties.Name="ItemsListView">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
