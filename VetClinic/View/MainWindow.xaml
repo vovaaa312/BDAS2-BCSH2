@@ -19,7 +19,7 @@
             </ListView.View>
         </ListView>
         <ComboBox HorizontalAlignment="Left" Margin="1253,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="226,5,-1027,5" AutomationProperties.Name="ItemsListView">
+        <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="226,5,-1027,5" AutomationProperties.Name="ItemsListView">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
