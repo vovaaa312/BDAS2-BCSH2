@@ -22,7 +22,20 @@
         <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="226,5,-1027,5" AutomationProperties.Name="ItemsListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Mazlicek" Width="80"/>
+                    <GridViewColumn Header="Nazev " Width="80"/>
+                    <GridViewColumn Header="Majitel" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
                 </GridView>
             </ListView.View>
         </ListView>
