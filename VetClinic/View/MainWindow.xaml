@@ -6,38 +6,65 @@
         xmlns:local="clr-namespace:VetClinic_DB_APP.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1400">
-    <Grid Margin="0,0,1040,0">
-        <Grid.RowDefinitions >
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-        <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,5,139,5" SelectionChanged="ListView_SelectionChanged">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <ComboBox HorizontalAlignment="Left" Margin="1253,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="120"/>
-        <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="226,5,-1027,5" AutomationProperties.Name="ItemsListView">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Mazlicek" Width="80"/>
-                    <GridViewColumn Header="Nazev " Width="80"/>
-                    <GridViewColumn Header="Majitel" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                    <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+    <Grid Margin="0,0,0,0">
+
+        <TabControl Name="Tab1">
+            <TabItem Header="Tab1">
+                <Grid Margin="220,0,0,100" >
+                    <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.Name="ItemsListView">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mazlicek" Width="80"/>
+                                <GridViewColumn Header="Nazev " Width="80"/>
+                                <GridViewColumn Header="Majitel" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tab2">
+                <Grid Margin="220,0,0,0" >
+                <ListView Name="MainListView2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0, 100"  AutomationProperties.Name="ItemsListView" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mazlicek" Width="80"/>
+                            <GridViewColumn Header="Nazev " Width="80"/>
+                            <GridViewColumn Header="Majitel" Width="80"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                    <Button Height="30" Width="80" Margin="35,691,1059,35">
+                        
+                    </Button>
+                </Grid>
+            </TabItem>
+        
+        </TabControl>
+
+        <Grid Margin="0,25,1185,100" HorizontalAlignment="Left" Width="200" >
+            <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged" Width="200" HorizontalAlignment="Right">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+
+        
+
+
     </Grid>
 </Window>

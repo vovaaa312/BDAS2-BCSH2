@@ -71,7 +71,9 @@ namespace VetClinic_DB_APP.View
             MessageBox.Show(TablesListView.SelectedItem.ToString());
         }
 
+        private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-
+        }
     }
 }
