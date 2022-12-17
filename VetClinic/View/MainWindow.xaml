@@ -10,8 +10,11 @@
 
         <TabControl Name="Tab1">
             <TabItem Header="Tab1">
-                <Grid Margin="220,0,0,100" >
-                    <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" AutomationProperties.Name="ItemsListView">
+                <Grid Margin="220,0,0,0" HorizontalAlignment="Left"  Width="1174" >
+                    <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0, 100"  AutomationProperties.Name="ItemsListView">
+                        <ListView.Background>
+                            <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
+                        </ListView.Background>
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Mazlicek" Width="80"/>
@@ -31,40 +34,90 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <Button Height="30" Width="80" Margin="0,0,1064,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Button>
+                    <Button Height="30" Width="80" Margin="0,0,904,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Button>
+                    <Button Height="30" Width="80" Margin="0,0,744,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Button>
+
+                    <Button Height="30" Width="126" Margin="0,0,54,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Button>
+
+                    <CheckBox Margin="0,0,200,42" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </CheckBox>
+
+                    <Label Content="Nový Klient" Margin="0,0,220,40" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Label>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Tab2">
-                <Grid Margin="220,0,0,0" >
-                <ListView Name="MainListView2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0, 100"  AutomationProperties.Name="ItemsListView" >
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Mazlicek" Width="80"/>
-                            <GridViewColumn Header="Nazev " Width="80"/>
-                            <GridViewColumn Header="Majitel" Width="80"/>
+                <Grid Margin="220,0,0,0" HorizontalAlignment="Left" Width="1174" >
+                    <ListView Name="MainListView2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0, 100"  AutomationProperties.Name="ItemsListView" >
+                        <ListView.Background>
+                            <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
+                        </ListView.Background>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Mazlicek" Width="80"/>
+                                <GridViewColumn Header="Nazev " Width="80"/>
+                                <GridViewColumn Header="Majitel" Width="80"/>
 
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                    <Button Height="30" Width="80" Margin="35,691,1059,35">
-                        
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Height="30" Width="80" Margin="0,0,1064,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
                     </Button>
+                    <Button Height="30" Width="80" Margin="0,0,904,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Button>
+
+
+                    <Button Height="30" Width="126" Margin="0,0,54,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Button>
+
+                    <CheckBox Margin="0,0,200,42" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </CheckBox>
+
+                    <Label Content="Nový Klient" Margin="0,0,220,40" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+
+                    </Label>
                 </Grid>
             </TabItem>
-        
+
         </TabControl>
 
-        <Grid Margin="0,25,1185,100" HorizontalAlignment="Left" Width="200" >
-            <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged" Width="200" HorizontalAlignment="Right">
+        <Grid Margin="8,25,0,0" HorizontalAlignment="Left" Width="200" >
+            <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0, 0, 0, 100" SelectionChanged="ListView_SelectionChanged" Width="200">
+                <ListView.Background>
+                    <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
+                </ListView.Background>
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
                     </GridView>
                 </ListView.View>
             </ListView>
-        </Grid>
 
-        
+            <Button Name="LoginBtn" Content="Login" Width="80" Margin="0,0,0,37" HorizontalAlignment="Center" Height="30" VerticalAlignment="Bottom"/>
+            
+        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
+        </Grid.Background>
 
 
     </Grid>
 </Window>
+    
+
