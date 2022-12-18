@@ -90,6 +90,8 @@
     </ApplicationDefinition>
     <Compile Include="Model\Adresa.cs" />
     <Compile Include="Model\Faktura.cs" />
+    <Compile Include="Model\VetFakturyPohled.cs" />
+    <Compile Include="Model\VeterinariMazlickyPohled.cs" />
     <Compile Include="Model\Klinika.cs" />
     <Compile Include="Model\Krev.cs" />
     <Compile Include="Model\Majitel.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Model\Veterinar.cs" />
     <Compile Include="Model\VysledekSluzby.cs" />
     <Compile Include="Model\Zvire.cs" />
+    <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="View\KlinikaView.xaml.cs">
       <DependentUpon>KlinikaView.xaml</DependentUpon>
     </Compile>
@@ -187,9 +190,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="View\Assets\papousek.png" />
   </ItemGroup>

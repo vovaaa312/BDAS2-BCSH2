@@ -34,34 +34,24 @@ namespace VetClinic_DB_APP.View
             OracleConnection con = new OracleConnection(constr);
             con.Open();
             MessageBox.Show("Connected to Oracle Database", con.ServerVersion);
-            
+
 
 
             OracleCommand getAllTables = new OracleCommand();
-            OracleCommand getView = new OracleCommand();
-            getAllTables.Connection= con;
-            getView.Connection= con;
+            getAllTables.Connection = con;
             getAllTables.CommandText = "SELECT table_name FROM all_tables\r\nwhere owner = 'ST64150'";
-            getView.CommandText = "SELECT JMENO_MAZLICEK FROM VETERINARI_MAZLICKY_VIEW";
-            OracleDataReader readerView = getView.ExecuteReader();
             OracleDataReader reader = getAllTables.ExecuteReader();
-            //
-            
 
-            if (reader.HasRows) 
+
+
+            if (reader.HasRows)
             {
                 while (reader.Read())
-                { 
+                {
                     TablesListView.Items.Add(reader["TABLE_NAME"].ToString());
                 }
             }
-            if (readerView.HasRows)
-            {
-                while (readerView.Read())
-                {
-                    MainListView.Items.Add(readerView["JMENO_MAZLICEK"].ToString());
-                }
-            }
+            
 
 
         }

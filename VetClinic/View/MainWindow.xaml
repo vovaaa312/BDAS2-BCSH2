@@ -4,36 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic_DB_APP.View"
+        xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1400">
+    <Window.DataContext>
+        <viewModel:VeterinariMazlickyPohledViewModel/>
+    </Window.DataContext>
+    
     <Grid Margin="0,0,0,0">
 
         <TabControl Name="Tab1">
             <TabItem Header="Tab1">
                 <Grid Margin="220,0,0,0" HorizontalAlignment="Left"  Width="1174" >
-                    <ListView Name="MainListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0, 100"  AutomationProperties.Name="ItemsListView">
-                        <ListView.Background>
-                            <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
-                        </ListView.Background>
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Mazlicek" Width="80"/>
-                                <GridViewColumn Header="Nazev " Width="80"/>
-                                <GridViewColumn Header="Majitel" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                                <GridViewColumn Header="Jmeno mazlicka" Width="80"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
+
+                    <DataGrid  ItemsSource="{Binding VeterinariMazlicky}" AutoGenerateColumns="False" x:Name="master" CanUserAddRows="False" CanUserDeleteRows="True" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="Jmeno mazlicku" Binding="{Binding Path=Jmeno_mazlicek}" Header="Customer ID" Width="60" />
+                            <DataGridTextColumn x:Name="Druh zvire" Binding="{Binding Path=Druh_zvire}" Header="Company Name" Width="160" />
+                            <DataGridTextColumn x:Name="Jmeno majitele" Binding="{Binding Path=Jmeno_majitele}" Header="Contact Name" Width="160" />
+                            <DataGridTextColumn x:Name="Primeni majitele" Binding="{Binding Path=Primeni_majitele}" Header="Contact Title" Width="60" />
+                            <DataGridTextColumn x:Name="Telefon" Binding="{Binding Path=Tel_cislo}" Header="Address" Width="130" />
+                            <DataGridTextColumn x:Name="Emeil" Binding="{Binding Path=Emeil}" Header="City" Width="60" />
+                            <DataGridTextColumn x:Name="Mesto" Binding="{Binding Path=Nazev_mesta}" Header="Region" Width="40" />
+                            <DataGridTextColumn x:Name="Ulice" Binding="{Binding Path=Nazev_ulice}" Header="Postal Code" Width="50" />
+                            <DataGridTextColumn x:Name="Cislo" Binding="{Binding Path=Cislo_ulice}" Header="Country" Width="80" />
+                            <DataGridTextColumn x:Name="PSC" Binding="{Binding Path=Psc_kod}" Header="Fax" Width="100" />
+                            <DataGridTextColumn x:Name="Stat" Binding="{Binding Path=Stat}" Header="Phone" Width="100" />
+                            <DataGridTextColumn x:Name="Datum nastupu" Binding="{Binding Path=Datum_nastupu}" Header="Fax" Width="100" />
+                            <DataGridTextColumn x:Name="Datum prop." Binding="{Binding Path=Datum_propusteni}" Header="Phone" Width="100" />
+                            <DataGridTextColumn x:Name="Oddeleni" Binding="{Binding Path=Nazev_oddeleni}" Header="Phone" Width="100" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
+                    
                     <Button Height="30" Width="80" Margin="0,0,1064,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 
                     </Button>
