@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="VetClinic.View.Table1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VetClinic.View"
+             xmlns:tab1data = "clr-namespace:VetClinic.ViewModel"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1174">
+    <UserControl.DataContext>
+        <tab1data:VeterinariMazlickyPohledViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <DataGrid ItemsSource="{Binding VeterinariMazlicky}" AutoGenerateColumns="False" x:Name="master" CanUserAddRows="False" CanUserDeleteRows="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="Jmeno_mazlicku" Binding="{Binding Path=Jmeno_mazlicek}" Header="Mazlicek" Width="60" />
+                <DataGridTextColumn x:Name="Druh_zvire" Binding="{Binding Path=Druh_zvire}" Header="Druh" Width="45" />
+                <DataGridTextColumn x:Name="Jmeno_majitele" Binding="{Binding Path=Jmeno_majitele}" Header="Jmeno" Width="60" />
+                <DataGridTextColumn x:Name="Primeni_majitele" Binding="{Binding Path=Primeni_majitele}" Header="Primeni" Width="70" />
+                <DataGridTextColumn x:Name="Telefon" Binding="{Binding Path=Tel_cislo}" Header="Telefon" Width="80" />
+                <DataGridTextColumn x:Name="Emeil" Binding="{Binding Path=Emeil}" Header="Emeil" Width="180" />
+                <DataGridTextColumn x:Name="Mesto" Binding="{Binding Path=Nazev_mesta}" Header="Mesto" Width="90" />
+                <DataGridTextColumn x:Name="Ulice" Binding="{Binding Path=Nazev_ulice}" Header="Ulice" Width="90" />
+                <DataGridTextColumn x:Name="Cislo" Binding="{Binding Path=Cislo_ulice}" Header="Cislo" Width="35" />
+                <DataGridTextColumn x:Name="PSC" Binding="{Binding Path=Psc_kod}" Header="PSC" Width="50" />
+                <DataGridTextColumn x:Name="Stat" Binding="{Binding Path=Stat}" Header="Stat" Width="94" />
+                <DataGridTextColumn x:Name="Datum_nastupu" Binding="{Binding Path=Datum_nastupu}" Header="Datum_nastupu" Width="105" />
+                <DataGridTextColumn x:Name="Datum_prop" Binding="{Binding Path=Datum_propusteni}" Header="Datum_prop" Width="105" />
+                <DataGridTextColumn x:Name="Oddeleni" Binding="{Binding Path=Nazev_oddeleni}" Header="Oddeleni" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

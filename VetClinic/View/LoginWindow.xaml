@@ -6,12 +6,40 @@
         xmlns:local="clr-namespace:VetClinic_DB_APP.View"
         mc:Ignorable="d"
         Title="LoginWindow" Height="400" Width="300">
-    <Grid>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="186,262,0,0" VerticalAlignment="Top" Height="29" Width="83"/>
-        <Button Content="Registration" HorizontalAlignment="Left" Margin="33,262,0,0" VerticalAlignment="Top" Width="83" Height="29" RenderTransformOrigin="0.521,0.509"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD"/>
-        <Button Content="Guest" HorizontalAlignment="Left" Margin="239,347,0,0" VerticalAlignment="Top" Height="27" Width="51"/>
+    <Grid >
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+
+        </Grid.RowDefinitions>
+        <Grid Name="Grid1" Grid.Row="5" Height="120">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+
+            <Button Grid.Row="0" Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="Registration" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+
+        </Grid>
+
+
+        <TextBox Grid.Row="2" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox Grid.Row="3" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+
+
 
     </Grid>
 </Window>

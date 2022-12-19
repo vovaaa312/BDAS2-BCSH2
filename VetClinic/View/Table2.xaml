@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="VetClinic.View.Table2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VetClinic.View"
+             xmlns:tab2data = "clr-namespace:VetClinic.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1174">
+    <UserControl.DataContext>
+        <tab2data:VeterinariFakturyPoledViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <DataGrid  ItemsSource="{Binding VeterinariFaktury}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="Jmeno_mazlicku1" Binding="{Binding Path=Nazev_sluzby}" Header="Mazlicek" Width="60" />
+                <DataGridTextColumn x:Name="Druh_zvire1" Binding="{Binding Path=Jmeno_mazlicek}" Header="Druh" Width="45" />
+                <DataGridTextColumn x:Name="Jmeno_majitele1" Binding="{Binding Path=Datum_vystaveni}" Header="Jmeno" Width="60" />
+                <DataGridTextColumn x:Name="Primeni_majitele1" Binding="{Binding Path=Konecna_cena}" Header="Primeni" Width="70" />
+                <DataGridTextColumn x:Name="Telefon1" Binding="{Binding Path=Nazev_oddeleni}" Header="Telefon" Width="80" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

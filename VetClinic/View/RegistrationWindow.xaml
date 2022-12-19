@@ -5,29 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic_DB_APP.View"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="400" Width="300">
+        Title="RegistrationWindow" Height="450" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
-        <Button Grid.Row="5" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Grid.Row="5" Grid.Column="1" Content="Register" HorizontalAlignment="Center"/>
+        <Button Grid.Row="10" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Row="10" Grid.Column="1" Content="Register" HorizontalAlignment="Center"/>
+        <Label Grid.Row="0" Content="Jmeno:" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="Přimení:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="Tel. čislo:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label Grid.Row="3" Content="Datum narození:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <ComboBox x:Name="specializaceComboBox" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90"/>
+        <ComboBox x:Name="oddeleniComboBox"  Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90"/>
+        <Label Grid.Row="5" Content="Stát:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label Grid.Row="6" Content="Město:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label Grid.Row="7" Content="Ulice:" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Label Grid.Row="7" Content="Čislo:" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+        <Label Grid.Row="8" Content="PSČ:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label Grid.Row="9" Content="Heslo:" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBox x:Name="jmenoTextBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="primeniTextBox"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="telCisloTextBox"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
-        <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
-        <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
-        <Label Grid.Row="1" Content="Email" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-        <Label Grid.Row="2" Content="Password" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="3" Content="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32"/>
-
+        <TextBox x:Name="statTextBox" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="mestoTextBox" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="uliceTextBox" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="cisloTextBox" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="pscTextBox" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="hesloTextBox" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
     </Grid>
 </Window>

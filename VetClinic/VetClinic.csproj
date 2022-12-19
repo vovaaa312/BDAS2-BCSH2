@@ -90,7 +90,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Adresa.cs" />
     <Compile Include="Model\Faktura.cs" />
-    <Compile Include="Model\VetFakturyPohled.cs" />
+    <Compile Include="Model\VeterinariFakturyPohled.cs" />
     <Compile Include="Model\VeterinariMazlickyPohled.cs" />
     <Compile Include="Model\Klinika.cs" />
     <Compile Include="Model\Krev.cs" />
@@ -102,6 +102,7 @@
     <Compile Include="Model\VysledekSluzby.cs" />
     <Compile Include="Model\Zvire.cs" />
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
+    <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />
     <Compile Include="View\KlinikaView.xaml.cs">
       <DependentUpon>KlinikaView.xaml</DependentUpon>
     </Compile>
@@ -116,6 +117,12 @@
     </Compile>
     <Compile Include="View\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Table1.xaml.cs">
+      <DependentUpon>Table1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Table2.xaml.cs">
+      <DependentUpon>Table2.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VysledekSluzby.xaml.cs">
       <DependentUpon>VysledekSluzby.xaml</DependentUpon>
@@ -151,6 +158,14 @@
     <Page Include="View\RegistrationWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Table1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Table2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\VysledekSluzby.xaml">
       <SubType>Designer</SubType>

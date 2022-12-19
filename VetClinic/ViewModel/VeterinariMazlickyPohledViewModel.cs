@@ -31,7 +31,7 @@ namespace VetClinic.ViewModel
 
             OracleConnection con = new OracleConnection(constr);
             con.Open();
-            MessageBox.Show("Connected to Oracle Database", con.ServerVersion);
+            MessageBox.Show("Connected to Oracle Database From Tab1", con.ServerVersion);
 
 
 
@@ -47,7 +47,7 @@ namespace VetClinic.ViewModel
                 {
                     veterinariMazlicky.Add(new VeterinariMazlickyPohled { 
                         Jmeno_mazlicek = readerView["JMENO_MAZLICEK"].ToString(),
-
+                        
 
                         Druh_zvire = readerView["DRUH_ZVIRE"].ToString(), 
 
