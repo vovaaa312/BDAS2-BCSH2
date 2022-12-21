@@ -43,9 +43,8 @@ namespace VetClinic.ViewModel
                         new VeterinariFakturyPohled {
                             Nazev_sluzby = readerView["NAZEV_SLUZBY"].ToString(),
                             Jmeno_mazlicek = readerView["JMENO_MAZLICEK"].ToString(),
-                            Datum_vystaveni = new DateTime(2013, 6, 1, 12, 32, 30),
+                            Datum_vystaveni = readerView["DATUM_VYSTAVENI"].ToString(),
                             Konecna_cena = float.Parse(readerView["KONECNA_CENA"].ToString()),
-                            //Konecna_cena = 10f,
                             Nazev_oddeleni = readerView["NAZEV_ODDELENI"].ToString()
                         }
                         );

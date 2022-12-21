@@ -1,9 +1,9 @@
-﻿<Window x:Class="VetClinic_DB_APP.View.MainWindow"
+﻿<Window x:Class="VetClinic.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VetClinic_DB_APP.View"
+        xmlns:local="clr-namespace:VetClinic.View"
         xmlns:tab1data = "clr-namespace:VetClinic.ViewModel"
         xmlns:views ="clr-namespace:VetClinic.View"
         mc:Ignorable="d"
@@ -14,6 +14,8 @@
     
     <Grid Margin="0,0,0,0">
 
+
+    
         <TabControl Name="Tab1">
             
             <TabItem Header="Tab1">
@@ -21,56 +23,12 @@
                 <Grid Margin="220,0,0,0" HorizontalAlignment="Left"  Width="1174" >
 
                     <views:Table1/>
-
-
-                    <Button Height="30" Width="80" Margin="0,0,1064,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-                    <Button Height="30" Width="80" Margin="0,0,904,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-                    <Button Height="30" Width="80" Margin="0,0,744,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-
-                    <Button Height="30" Width="126" Margin="0,0,54,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-
-                    <CheckBox Margin="0,0,200,42" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </CheckBox>
-
-                    <Label Content="Nový Klient" Margin="0,0,220,40" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Label>
-
                 </Grid>
             </TabItem>
             <TabItem Header="Tab2">
                 <Grid Margin="220,0,0,0" HorizontalAlignment="Left" Width="1174" >
 
                     <views:Table2/>
-
-                    <Button Height="30" Width="80" Margin="0,0,1064,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-                    <Button Height="30" Width="80" Margin="0,0,904,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-
-
-                    <Button Height="30" Width="126" Margin="0,0,54,37" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Button>
-
-                    <CheckBox Margin="0,0,200,42" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </CheckBox>
-
-                    <Label Content="Nový Klient" Margin="0,0,220,40" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-                    </Label>
                 </Grid>
             </TabItem>
 

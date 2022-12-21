@@ -99,10 +99,12 @@
     <Compile Include="Model\Oddeleni.cs" />
     <Compile Include="Model\PetKarta.cs" />
     <Compile Include="Model\Veterinar.cs" />
+    <Compile Include="Model\VeterinariVysledkyPohled.cs" />
     <Compile Include="Model\VysledekSluzby.cs" />
     <Compile Include="Model\Zvire.cs" />
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />
+    <Compile Include="ViewModel\VeterinariVysledkyPohledViewModel.cs" />
     <Compile Include="View\KlinikaView.xaml.cs">
       <DependentUpon>KlinikaView.xaml</DependentUpon>
     </Compile>

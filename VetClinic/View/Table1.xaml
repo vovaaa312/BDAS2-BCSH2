@@ -7,13 +7,13 @@
              xmlns:tab1data = "clr-namespace:VetClinic.ViewModel"
              
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="1174">
+             d:DesignHeight="800" d:DesignWidth="1174">
     <UserControl.DataContext>
         <tab1data:VeterinariMazlickyPohledViewModel/>
     </UserControl.DataContext>
     
-    <Grid>
-        <DataGrid ItemsSource="{Binding VeterinariMazlicky}" AutoGenerateColumns="False" x:Name="master" CanUserAddRows="False" CanUserDeleteRows="True" >
+    <Grid Height="750" VerticalAlignment="Top">
+        <DataGrid Margin="0,0,0,100" ItemsSource="{Binding VeterinariMazlicky}" AutoGenerateColumns="False" x:Name="master" CanUserAddRows="False" CanUserDeleteRows="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="Jmeno_mazlicku" Binding="{Binding Path=Jmeno_mazlicek}" Header="Mazlicek" Width="60" />
                 <DataGridTextColumn x:Name="Druh_zvire" Binding="{Binding Path=Druh_zvire}" Header="Druh" Width="45" />
@@ -31,5 +31,27 @@
                 <DataGridTextColumn x:Name="Oddeleni" Binding="{Binding Path=Nazev_oddeleni}" Header="Oddeleni" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
+        <Grid Height="100" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width
+                                  ="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Grid.Column="1" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Grid.Column="2" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Grid.Column="3" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Column="6"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40,0" />
+            <Label Content="Nový Klient" Grid.Column="6" Margin="20,0,0,0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" />
+            <ComboBox Grid.Column="7" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
     </Grid>
+    
+    
 </UserControl>

@@ -1,4 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -45,37 +46,33 @@ namespace VetClinic.ViewModel
             {
                 while (readerView.Read())
                 {
-                    veterinariMazlicky.Add(new VeterinariMazlickyPohled { 
-                        Jmeno_mazlicek = readerView["JMENO_MAZLICEK"].ToString(),
-                        
-
-                        Druh_zvire = readerView["DRUH_ZVIRE"].ToString(), 
-
-                        //Druh_zvire = "Sobaka",
-
-                        Jmeno_majitele = readerView["JMENO_MAJITEL"].ToString(),
-                        Primeni_majitele = readerView["PRIJMENI_MAJITEL"].ToString(),
-                        Tel_cislo = readerView["TEL_CISLO"].ToString(),
-
-
-                        Emeil = readerView["EMAIL"].ToString(),
-                        Nazev_mesta = readerView["NAZEV_MESTA"].ToString(),
-                        Nazev_ulice = readerView["NAZEV_ULICE"].ToString(),
-                        
-                        
-                        Cislo_ulice = int.Parse(readerView["CISLO_ULICE"].ToString()),
-
-                        //Cislo_ulice = 6,
-
-                        Psc_kod = readerView["PSC_KOD"].ToString(),
-                        Stat = readerView["STAT"].ToString(),
-                        //Datum_nastupu = DateTime.ParseExact(readerView["DATUM_NASTUPU"].ToString(), "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture),
-                        ////Datum_propusteni = DateTime.ParseExact(readerView["DATUM_PROPUSTENI"].ToString(), "dd.MM.yyyy HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.AllowWhiteSpaces),
-
-                        Datum_nastupu = new DateTime(2013, 6, 1, 12, 32, 30),
-                        Datum_propusteni = new DateTime(2013, 6, 1, 12, 32, 30),
-
-                        Nazev_oddeleni = readerView["NAZEV_ODDELENI"].ToString()
+                     veterinariMazlicky.Add(new VeterinariMazlickyPohled { 
+                     Jmeno_mazlicek = readerView["JMENO_MAZLICEK"].ToString(),
+                     
+                     
+                     Druh_zvire = readerView["DRUH_ZVIRE"].ToString(), 
+                     
+                     Jmeno_majitele = readerView["JMENO_MAJITEL"].ToString(),
+                     Primeni_majitele = readerView["PRIJMENI_MAJITEL"].ToString(),
+                     Tel_cislo = readerView["TEL_CISLO"].ToString(),
+                     
+                     Emeil = readerView["EMAIL"].ToString(),
+                     Nazev_mesta = readerView["NAZEV_MESTA"].ToString(),
+                     Nazev_ulice = readerView["NAZEV_ULICE"].ToString(),
+                     
+                     Cislo_ulice = int.Parse(readerView["CISLO_ULICE"].ToString()),
+                     
+                     Psc_kod = readerView["PSC_KOD"].ToString(),
+                     Stat = readerView["STAT"].ToString(),
+                     
+                     
+                     Datum_nastupu = readerView["DATUM_NASTUPU"].ToString(),
+                     Datum_propusteni = readerView["DATUM_PROPUSTENI"].ToString(), 
+                     
+                     //Datum_nastupu = readerView.GetDateTime(11).ToString(),
+                     //Datum_propusteni = readerView.GetDateTime(12).ToString(),
+                     
+                     Nazev_oddeleni = readerView["NAZEV_ODDELENI"].ToString()
 
 
                     });

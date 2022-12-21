@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Types;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,8 @@ namespace VetClinic.Model
         public int Cislo_ulice { get; set; }
         public string Psc_kod { get; set; }
         public string Stat { get; set; }
-        public DateTime Datum_nastupu { get; set; }
-        public DateTime Datum_propusteni { get; set; }
+        public string Datum_nastupu { get; set; }
+        public string Datum_propusteni { get; set; }
         public string Nazev_oddeleni { get; set; }
 
 

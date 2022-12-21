@@ -10,7 +10,7 @@ namespace VetClinic.Model
     {
         public string Nazev_sluzby { get; set; }
         public string Jmeno_mazlicek { get; set; }
-        public DateTime Datum_vystaveni { get; set; }
+        public string Datum_vystaveni { get; set; }
         public float Konecna_cena { get; set; }
         public string Nazev_oddeleni { get; set;}
 

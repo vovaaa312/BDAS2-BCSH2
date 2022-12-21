@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace VetClinic_DB_APP.View
+namespace VetClinic.View
 {
     /// <summary>
     /// Логика взаимодействия для RegistrationWindow.xaml
