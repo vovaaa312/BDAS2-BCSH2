@@ -11,7 +11,7 @@ namespace VetClinic.ViewModel
     internal class RegistrationViewModel
     {
         public RegistrationViewModel() {
-            RegistrationCommand = new Command(OpenRegWindow());
+            //RegistrationCommand = new Command(OpenRegWindow());
         }
 
 
