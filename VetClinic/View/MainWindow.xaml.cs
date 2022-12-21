@@ -33,7 +33,7 @@ namespace VetClinic.View
 
             OracleConnection con = new OracleConnection(constr);
             con.Open();
-            MessageBox.Show("Connected to Oracle Database", con.ServerVersion);
+            //MessageBox.Show("Connected to Oracle Database", con.ServerVersion);
 
 
 

@@ -32,7 +32,7 @@ namespace VetClinic.ViewModel
 
             OracleConnection con = new OracleConnection(constr);
             con.Open();
-            MessageBox.Show("Connected to Oracle Database From Tab3", con.ServerVersion);
+            //MessageBox.Show("Connected to Oracle Database From Tab3", con.ServerVersion);
 
 
 

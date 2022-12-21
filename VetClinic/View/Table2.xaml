@@ -10,17 +10,21 @@
     <UserControl.DataContext>
         <tab2data:VeterinariFakturyPoledViewModel/>
     </UserControl.DataContext>
-    <Grid Height="750">
-        <DataGrid Margin="0,0,0,100" ItemsSource="{Binding VeterinariFaktury}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
+    <Grid Height="750" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="650"/>
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariFaktury}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="Jmeno_mazlicku1" Binding="{Binding Path=Nazev_sluzby}" Header="Mazlicek" Width="60" />
                 <DataGridTextColumn x:Name="Druh_zvire1" Binding="{Binding Path=Jmeno_mazlicek}" Header="Druh" Width="45" />
                 <DataGridTextColumn x:Name="Jmeno_majitele1" Binding="{Binding Path=Datum_vystaveni}" Header="Jmeno" Width="60" />
                 <DataGridTextColumn x:Name="Primeni_majitele1" Binding="{Binding Path=Konecna_cena}" Header="Primeni" Width="70" />
-                <DataGridTextColumn x:Name="Telefon1" Binding="{Binding Path=Nazev_oddeleni}" Header="Telefon" Width="80" />
+                <DataGridTextColumn x:Name="Telefon1" Binding="{Binding Path=Nazev_oddeleni}" Header="Telefon" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
-        <Grid Height="100" VerticalAlignment="Bottom">
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
@@ -29,8 +33,7 @@
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width
-                                  ="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
             <Button Grid.Column="1" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />

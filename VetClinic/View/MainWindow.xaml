@@ -4,38 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic.View"
-        xmlns:tab1data = "clr-namespace:VetClinic.ViewModel"
-        xmlns:views ="clr-namespace:VetClinic.View"
+        xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1400">
-    <Window.DataContext>
-        <tab1data:VeterinariMazlickyPohledViewModel/>
-    </Window.DataContext>
-    
-    <Grid Margin="0,0,0,0">
-
+        Title="MainWindow" MinHeight="800" MinWidth="1400"
+        MaxHeight="800" MaxWidth="1400">
 
     
-        <TabControl Name="Tab1">
+    <Grid>
+
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TabControl Grid.Column="1" Name="Tab1">
             
             <TabItem Header="Tab1">
-                
-                <Grid Margin="220,0,0,0" HorizontalAlignment="Left"  Width="1174" >
 
-                    <views:Table1/>
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+                    <local:Table1/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tab2">
-                <Grid Margin="220,0,0,0" HorizontalAlignment="Left" Width="1174" >
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
 
-                    <views:Table2/>
+                    <local:Table2/>
                 </Grid>
             </TabItem>
 
         </TabControl>
 
-        <Grid Margin="8,25,0,0" HorizontalAlignment="Left" Width="200" >
-            <ListView Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0, 0, 0, 100" SelectionChanged="ListView_SelectionChanged" Width="200">
+        <Grid Grid.Column="0" HorizontalAlignment="Center" Width="230">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="700" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}"  SelectionChanged="ListView_SelectionChanged" Width="230">
                 <ListView.Background>
                     <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
                 </ListView.Background>
@@ -46,7 +52,7 @@
                 </ListView.View>
             </ListView>
 
-            <Button Name="LoginBtn" Content="Login" Width="80" Margin="0,0,0,37" HorizontalAlignment="Center" Height="30" VerticalAlignment="Bottom"/>
+            <Button Command="{Binding RegistrationCommand}" Grid.Row="1" Name="LoginBtn" Content="Login" Width="80"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
             
         </Grid>
         <Grid.Background>
