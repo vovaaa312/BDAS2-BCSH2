@@ -104,7 +104,7 @@
     <Compile Include="Model\VysledekSluzby.cs" />
     <Compile Include="Model\Zvire.cs" />
     <Compile Include="Model\CommandHendler.cs" />
-    <Compile Include="ViewModel\RegistrationViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariVysledkyPohledViewModel.cs" />

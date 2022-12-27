@@ -9,9 +9,9 @@ namespace VetClinic
 {
     public class WindowRegistration : IWindowService
     {
+        RegistrationWindow registrationWindow = new RegistrationWindow();
         public void CreateWindow()
-        {
-            RegistrationWindow registrationWindow = new RegistrationWindow();
+        { 
             registrationWindow.Show();
         }
     }

@@ -10,7 +10,7 @@
         Title="MainWindow" MinHeight="800" MinWidth="1400"
         MaxHeight="800" MaxWidth="1400">
     <Window.DataContext>
-        <viewModel:RegistrationViewModel/>
+        <viewModel:MainViewModel/>
     </Window.DataContext> 
     
     <Grid>
