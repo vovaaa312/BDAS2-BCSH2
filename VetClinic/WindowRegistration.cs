@@ -7,7 +7,7 @@ using VetClinic.View;
 
 namespace VetClinic
 {
-    internal class WindowRegistration : IWindowService
+    public class WindowRegistration : IWindowService
     {
         public void CreateWindow()
         {

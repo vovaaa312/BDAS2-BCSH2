@@ -103,7 +103,7 @@
     <Compile Include="Model\VeterinariVysledkyPohled.cs" />
     <Compile Include="Model\VysledekSluzby.cs" />
     <Compile Include="Model\Zvire.cs" />
-    <Compile Include="ViewModel\CommandHendler.cs" />
+    <Compile Include="Model\CommandHendler.cs" />
     <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />

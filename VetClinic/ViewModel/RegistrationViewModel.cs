@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
+using VetClinic.Model;
 
 namespace VetClinic.ViewModel
 {
     internal class RegistrationViewModel
     {
+
+        WindowRegistration wr = new WindowRegistration();
         public RegistrationViewModel() {
             //RegistrationCommand = new Command(OpenRegWindow());
         }
@@ -18,11 +22,27 @@ namespace VetClinic.ViewModel
 
         WindowRegistration windowReg = new WindowRegistration();
 
-        public ICommand RegistrationCommand { get; set; }
+        
 
-        private object OpenRegWindow()
+        private ICommand _registrationCommand;
+        public ICommand RegistrationCommand
         {
-            throw new NotImplementedException();
+            get
+            {
+                return _registrationCommand ?? (_registrationCommand = new CommandHandler(() => OpenRegWindow(), canExecute()));
+            }
+        }
+
+        public bool canExecute() {
+            return true;
+        }
+
+        private void OpenRegWindow()
+        {
+            MessageBox.Show("Hello world");
+            wr.CreateWindow();
         }
     }
+
+    
 }
