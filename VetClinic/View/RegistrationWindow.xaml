@@ -4,8 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic.View"
+        xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="450" Width="300">
+        Title="RegistrationWindow" Height="600" Width="300">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />
@@ -23,9 +28,10 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
-        <Button Grid.Row="10" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button Grid.Row="10" Grid.Column="1" Content="Register" HorizontalAlignment="Center"/>
+        <Button Command="{Binding BackToMainWindowCommand}" Grid.Row="11" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Command="{Binding ConfirmRegistrationCommand}"  Grid.Row="11" Grid.Column="1" Content="Register" HorizontalAlignment="Center"/>
         <Label Grid.Row="0" Content="Jmeno:" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
         <Label Grid.Row="1" Content="Přimení:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Grid.Row="2" Content="Tel. čislo:" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -41,12 +47,14 @@
         <TextBox x:Name="jmenoTextBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="primeniTextBox"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="telCisloTextBox"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
-        <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <DatePicker x:Name="datumNarozeniDatePicker" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="statTextBox" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="mestoTextBox" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="uliceTextBox" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="cisloTextBox" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="pscTextBox" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="hesloTextBox" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <Label Grid.Row="10" Content="Email:" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        <TextBox x:Name="emailTextBox" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
     </Grid>
 </Window>

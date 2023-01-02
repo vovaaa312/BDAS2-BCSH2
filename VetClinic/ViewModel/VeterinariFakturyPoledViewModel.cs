@@ -21,7 +21,7 @@ namespace VetClinic.ViewModel
         public void LoadVeterinariFaktury(){
             ObservableCollection<VeterinariFakturyPohled> veterinariFaktury = new ObservableCollection<VeterinariFakturyPohled>();
 
-            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql1.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=IDAS)));" +
+            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
                         "user id=st64150;password=vova0107;" +
                         "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
 

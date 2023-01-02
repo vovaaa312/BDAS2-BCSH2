@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace VetClinic
 {
-    interface IWindowService
+    public interface IWindowService
     {
         void CreateWindow();
+        void CloseWindow();
     }
 }

@@ -91,6 +91,7 @@
     <Compile Include="IWindowService.cs" />
     <Compile Include="Model\Adresa.cs" />
     <Compile Include="Model\Faktura.cs" />
+    <Compile Include="Model\ListOfWindows.cs" />
     <Compile Include="Model\VeterinariFakturyPohled.cs" />
     <Compile Include="Model\VeterinariMazlickyPohled.cs" />
     <Compile Include="Model\Klinika.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Model\Zvire.cs" />
     <Compile Include="Model\CommandHendler.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariVysledkyPohledViewModel.cs" />
@@ -135,7 +137,7 @@
     <Compile Include="View\VysledekSluzby.xaml.cs">
       <DependentUpon>VysledekSluzby.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WindowRegistration.cs" />
+    <Compile Include="RegistrationWindowService.cs" />
     <Page Include="View\Filtr.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

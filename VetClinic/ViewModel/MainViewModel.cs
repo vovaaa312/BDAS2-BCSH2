@@ -1,11 +1,12 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using VetClinic.Model;
 
 namespace VetClinic.ViewModel
 {
-    internal class MainViewModel
+    public class MainViewModel
     {
-        readonly WindowRegistration wr = new WindowRegistration();
+        readonly RegistrationWindowService wr = new RegistrationWindowService();
         public MainViewModel() {
         }
 
@@ -25,36 +26,13 @@ namespace VetClinic.ViewModel
             }
         }
 
-        public bool canExecute() {
+        private bool canExecute() {
             return true;
         }
 
         private void OpenRegWindow()
         {
             wr.CreateWindow();
-        }
-
-        /*
-         * Confirm registration
-         * 
-         * TODO:
-         * Check all data in modal window, create SQL string dotaz
-         * 
-         */
-
-        private ICommand _confirmRegistrationCommand;
-        public ICommand ConfirmRegistrationCommand
-        {
-            get
-            {
-                return _confirmRegistrationCommand ?? (_confirmRegistrationCommand = new CommandHandler(() => ConfirmRefistration(), canExecute()));
-            }
-        }
-
-
-        private void ConfirmRefistration()
-        {
-            
         }
 
         /*
@@ -76,9 +54,38 @@ namespace VetClinic.ViewModel
 
         private void BackToMainWindow()
         {
+            wr.CloseWindow();
 
         }
 
+
+        /*
+        * Confirm registration
+        * 
+        * TODO:
+        * Check all data in modal window, create SQL string dotaz
+        * 
+        */
+
+        private ICommand _confirmRegistrationCommand;
+        public ICommand ConfirmRegistrationCommand
+        {
+            get
+            {
+                return _confirmRegistrationCommand ?? (_confirmRegistrationCommand = new CommandHandler(() => ConfirmRefistration(), canExecute()));
+            }
+        }
+
+
+        private void ConfirmRefistration()
+        {
+            wr.ConfirmRegistr();
+            BackToMainWindow();
+        }
+
+
+
+        
 
 
     }
