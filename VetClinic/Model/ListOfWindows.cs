@@ -11,6 +11,13 @@ namespace VetClinic.Model
 {
     public static class ListOfWindows
     {
+        /*
+         * Class for managing and storing 
+         * windows of all types 
+         * 
+         */
+
+
         static ObservableCollection<Window> windows = new ObservableCollection<Window>();
 
         public static void AddWindow(Window window) {
@@ -36,6 +43,19 @@ namespace VetClinic.Model
             foreach (Window window in windows) {
                 if (window.GetType() == new RegistrationWindow().GetType()) {
                     iw = (RegistrationWindow)window;
+                }
+            }
+            return iw;
+        }
+
+        public static LoginWindow getLoginWindow()
+        {
+            LoginWindow iw = null;
+            foreach (Window window in windows)
+            {
+                if (window.GetType() == new LoginWindow().GetType())
+                {
+                    iw = (LoginWindow)window;
                 }
             }
             return iw;

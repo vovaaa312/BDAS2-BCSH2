@@ -4,11 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic.View"
+        xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
         Title="LoginWindow" Height="400" Width="300">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
     <Grid >
-
-
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="40" />
@@ -16,7 +18,6 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-
         </Grid.RowDefinitions>
         <Grid Name="Grid1" Grid.Row="5" Height="120">
             <Grid.ColumnDefinitions>
@@ -29,15 +30,14 @@
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
 
-
-            <Button Grid.Row="0" Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-            <Button Grid.Row="0" Grid.Column="1" Content="Registration" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+            <Button Command="{Binding ConfirmLoginCommand}" Grid.Row="0" Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+            <Button Command="{Binding RegistrationCommand}" Grid.Row="0" Grid.Column="1" Content="Registration" HorizontalAlignment="Center"  VerticalAlignment="Center" />
 
         </Grid>
 
 
-        <TextBox Grid.Row="2" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
-        <TextBox Grid.Row="3" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="login" Grid.Row="2" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
+        <TextBox x:Name="password" Grid.Row="3" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
 
 
 

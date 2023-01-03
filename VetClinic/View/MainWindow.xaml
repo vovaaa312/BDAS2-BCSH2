@@ -55,7 +55,8 @@
                 </ListView.View>
             </ListView>
 
-            <Button Command="{Binding RegistrationCommand}" Grid.Row="1" Name="LoginBtn" Content="Login" Width="80"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Command="{Binding RegistrationCommand}" Grid.Row="1" Content="Login" Width="80"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Command="{Binding LoginCommand}" Grid.Row="1" Content="Login" Width="80"  HorizontalAlignment="Right" VerticalAlignment="Center"/>
             
         </Grid>
         <Grid.Background>

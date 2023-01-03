@@ -6,17 +6,47 @@ namespace VetClinic.ViewModel
 {
     public class MainViewModel
     {
+        
         readonly RegistrationWindowService wr = new RegistrationWindowService();
+        readonly LoginWindowService lw = new LoginWindowService();
         public MainViewModel() {
         }
 
-        /*
-         * Registration
-         * 
-         * TODO:
-         * Opens modal window RegistrationWindow, freez main window
-         * 
-         */
+        private ICommand _confirmLoginCommand;
+        public ICommand ConfirmLoginCommand
+        {
+            get
+            {
+                return _confirmLoginCommand ?? (_confirmLoginCommand = new CommandHandler(() => ConfirmLogin(), canExecute()));
+            }
+        }
+
+        private void ConfirmLogin()
+        {
+            lw.Login();
+        }
+
+        
+        private ICommand _loginCommand;
+        public ICommand LoginCommand
+        {
+            get
+            {
+                return _loginCommand ?? (_loginCommand = new CommandHandler(() => LoginUser(), canExecute()));
+            }
+        }
+
+        private bool canExecute()
+        {
+            return true;
+        }
+
+        private void LoginUser()
+        {
+            lw.CreateWindow();
+        }
+
+        
         private ICommand _registrationCommand;
         public ICommand RegistrationCommand
         {
@@ -26,22 +56,12 @@ namespace VetClinic.ViewModel
             }
         }
 
-        private bool canExecute() {
-            return true;
-        }
-
         private void OpenRegWindow()
         {
             wr.CreateWindow();
         }
 
-        /*
-        * Back to main window
-        * 
-        * TODO:
-        * Close modal window without saivind progress, unfreez main window
-        * 
-        */
+        
 
         private ICommand _backToMainWindowCommand;
         public ICommand BackToMainWindowCommand
@@ -55,17 +75,10 @@ namespace VetClinic.ViewModel
         private void BackToMainWindow()
         {
             wr.CloseWindow();
-
         }
 
 
-        /*
-        * Confirm registration
-        * 
-        * TODO:
-        * Check all data in modal window, create SQL string dotaz
-        * 
-        */
+       
 
         private ICommand _confirmRegistrationCommand;
         public ICommand ConfirmRegistrationCommand
@@ -80,7 +93,6 @@ namespace VetClinic.ViewModel
         private void ConfirmRefistration()
         {
             wr.ConfirmRegistr();
-            BackToMainWindow();
         }
 
 

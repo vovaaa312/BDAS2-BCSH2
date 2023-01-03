@@ -7,41 +7,60 @@
         mc:Ignorable="d"
         Title="PridaniNovePetkarty" Height="450" Width="600">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
 
 
-        <Label Content="Jméno mazlička:" HorizontalAlignment="Left" Margin="36,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="Jméno majítele:" HorizontalAlignment="Left" Margin="36,81,0,0" VerticalAlignment="Top"/>
-        <Label Content="Telefonní čislo:" HorizontalAlignment="Left" Margin="36,111,0,0" VerticalAlignment="Top"/>
-        <Label Content="Město:" HorizontalAlignment="Left" Margin="36,141,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ulice:" HorizontalAlignment="Left" Margin="36,171,0,0" VerticalAlignment="Top"/>
-        <Label Content="Stát:" HorizontalAlignment="Left" Margin="36,201,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datum nástupu:" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top"/>
+        <Label Grid.Row="1" Content="Jméno mazlička:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="Jméno majítele:" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+        <Label Grid.Row="3" Content="Telefonní čislo:" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+        <Label Grid.Row="4" Content="Město:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Grid.Row="5" Content="Ulice:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Grid.Row="6" Content="Stát:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Grid.Row="7" Content="Datum nástupu:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
 
-        <TextBox HorizontalAlignment="Left" Margin="141,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Grid.Row="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Row="2" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Row="3" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Row="4" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Row="5" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Row="6" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox Grid.Row="7" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
 
 
-        <Label Content="Typ zvire:" HorizontalAlignment="Left" Margin="309,51,0,0" VerticalAlignment="Top"/>
-        <Label Content="Primeni:" HorizontalAlignment="Left" Margin="309,81,0,0" VerticalAlignment="Top"/>
-        <Label Content="Emeil:" HorizontalAlignment="Left" Margin="309,111,0,0" VerticalAlignment="Top"/>
-        <Label Content="Čislo ulice:" HorizontalAlignment="Left" Margin="309,141,0,0" VerticalAlignment="Top"/>
-        <Label Content="PSČ:" HorizontalAlignment="Left" Margin="309,171,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nazev oddělení:" HorizontalAlignment="Left" Margin="309,201,0,0" VerticalAlignment="Top"/>
-        <Label Content="Data výstupu:" HorizontalAlignment="Left" Margin="309,231,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="408,55,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.126,0.426"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Typ zvire:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="2" Grid.Column="1" Content="Primeni:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="3" Grid.Column="1" Content="Emeil:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="4" Grid.Column="1"  Content="Čislo ulice:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="5" Grid.Column="1" Content="PSČ:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="6" Grid.Column="1"  Content="Nazev oddělení:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Row="7" Grid.Column="1"  Content="Data výstupu:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox  Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox  Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox  Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox  Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="120" RenderTransformOrigin="0.126,0.426"/>
 
     </Grid>
 </Window>
