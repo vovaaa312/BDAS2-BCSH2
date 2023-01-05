@@ -67,5 +67,10 @@ namespace VetClinic.View
         {
 
         }
+
+        private void Table1_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

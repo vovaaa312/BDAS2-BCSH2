@@ -19,19 +19,19 @@
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariMazlicky}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False" x:Name="Tab1DataGrid" CanUserAddRows="False" CanUserDeleteRows="True">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="Jmeno_mazlicku" Binding="{Binding Path=Jmeno_mazlicek}" Header="Mazlicek" Width="60" />
+                <DataGridTextColumn x:Name="Jmeno_mazlicku" Binding="{Binding Path=Jmeno_mazlicek}" Header="Jmeno mazlicka" Width="75" />
                 <DataGridTextColumn x:Name="Druh_zvire" Binding="{Binding Path=Druh_zvire}" Header="Druh" Width="45" />
                 <DataGridTextColumn x:Name="Jmeno_majitele" Binding="{Binding Path=Jmeno_majitele}" Header="Jmeno" Width="60" />
-                <DataGridTextColumn x:Name="Primeni_majitele" Binding="{Binding Path=Primeni_majitele}" Header="Primeni" Width="70" />
+                <DataGridTextColumn x:Name="Primeni_majitele" Binding="{Binding Path=Primeni_majitele}" Header="Prijmeni" Width="70" />
                 <DataGridTextColumn x:Name="Telefon" Binding="{Binding Path=Tel_cislo}" Header="Telefon" Width="80" />
-                <DataGridTextColumn x:Name="Emeil" Binding="{Binding Path=Emeil}" Header="Emeil" Width="180" />
+                <DataGridTextColumn x:Name="Emeil" Binding="{Binding Path=Emeil}" Header="Email" Width="180" />
                 <DataGridTextColumn x:Name="Mesto" Binding="{Binding Path=Nazev_mesta}" Header="Mesto" Width="90" />
                 <DataGridTextColumn x:Name="Ulice" Binding="{Binding Path=Nazev_ulice}" Header="Ulice" Width="90" />
                 <DataGridTextColumn x:Name="Cislo" Binding="{Binding Path=Cislo_ulice}" Header="Cislo" Width="35" />
                 <DataGridTextColumn x:Name="PSC" Binding="{Binding Path=Psc_kod}" Header="PSC" Width="50" />
                 <DataGridTextColumn x:Name="Stat" Binding="{Binding Path=Stat}" Header="Stat" Width="94" />
-                <DataGridTextColumn x:Name="Datum_nastupu" Binding="{Binding Path=Datum_nastupu}" Header="Datum_nastupu" Width="105" />
-                <DataGridTextColumn x:Name="Datum_prop" Binding="{Binding Path=Datum_propusteni}" Header="Datum_prop" Width="105" />
+                <DataGridTextColumn x:Name="Datum_nastupu" Binding="{Binding Path=Datum_nastupu}" Header="Nastup" Width="105" />
+                <DataGridTextColumn x:Name="Datum_prop" Binding="{Binding Path=Datum_propusteni}" Header="Propusteni" Width="105" />
                 <DataGridTextColumn x:Name="Oddeleni" Binding="{Binding Path=Nazev_oddeleni}" Header="Oddeleni" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
