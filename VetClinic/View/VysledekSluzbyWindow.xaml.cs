@@ -17,9 +17,9 @@ namespace VetClinic.View
     /// <summary>
     /// Логика взаимодействия для VysledekSluzby.xaml
     /// </summary>
-    public partial class VysledekSluzby : Window
+    public partial class VysledekSluzbyWindow : Window
     {
-        public VysledekSluzby()
+        public VysledekSluzbyWindow()
         {
             InitializeComponent();
         }

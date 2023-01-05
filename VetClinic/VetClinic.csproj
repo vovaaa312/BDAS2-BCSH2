@@ -138,8 +138,8 @@
     <Compile Include="View\Table2.xaml.cs">
       <DependentUpon>Table2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\VysledekSluzby.xaml.cs">
-      <DependentUpon>VysledekSluzby.xaml</DependentUpon>
+    <Compile Include="View\VysledekSluzbyWindow.xaml.cs">
+      <DependentUpon>VysledekSluzbyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegistrationWindowService.cs" />
     <Page Include="View\Filtr.xaml">
@@ -186,7 +186,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\VysledekSluzby.xaml">
+    <Page Include="View\VysledekSluzbyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

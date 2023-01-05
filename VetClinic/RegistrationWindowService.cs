@@ -24,6 +24,12 @@ namespace VetClinic
             {
                 return;
             }
+            //If login window was oppened it will close
+            if (ListOfWindows.getLoginWindow() != null) {
+                LoginWindowService lw = new LoginWindowService();
+                lw.CloseWindow();
+            }
+
             
             RegistrationWindow registrationWindow = new RegistrationWindow();
             registrationWindow.Show();
@@ -118,9 +124,16 @@ namespace VetClinic
 
         public void CloseWindow()
         {
+            if (ListOfWindows.getRegWindow() == null)
+            {
+                return;
+            }
+
+
             ListOfWindows.getRegWindow().Close();
             ListOfWindows.RemoveWindow(ListOfWindows.getRegWindow());
-        }
+           
+}
 
 
         private bool IsDigitsOnly(string str)

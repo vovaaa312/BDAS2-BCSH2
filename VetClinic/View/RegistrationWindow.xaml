@@ -5,11 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic.View"
         xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
+        
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="600" Width="300">
+        Title="RegistrationWindow" MinHeight="500" MinWidth="300" MaxHeight="500" MaxWidth="300">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
+
+   
+
+
 
     <Grid>
         <Grid.ColumnDefinitions>

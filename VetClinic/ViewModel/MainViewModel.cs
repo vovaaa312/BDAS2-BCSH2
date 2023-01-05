@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Input;
 using VetClinic.Model;
 
@@ -10,6 +11,40 @@ namespace VetClinic.ViewModel
         readonly RegistrationWindowService wr = new RegistrationWindowService();
         readonly LoginWindowService lw = new LoginWindowService();
         public MainViewModel() {
+        }
+
+        public void Window_Closing(object sender, CancelEventArgs e)
+        {
+            wr.CloseWindow();
+            lw.CloseWindow();
+        }
+
+        private ICommand _addResultsCommand;
+        public ICommand AddResultsCommand
+        {
+            get
+            {
+                return _addResultsCommand ?? (_addResultsCommand = new CommandHandler(() => AddResults(), canExecute()));
+            }
+        }
+
+        private void AddResults()
+        {
+            
+        }
+
+        private ICommand _closeResultsCommand;
+        public ICommand CloseResultsCommand
+        {
+            get
+            {
+                return _closeResultsCommand ?? (_closeResultsCommand = new CommandHandler(() => CloseResults(), canExecute()));
+            }
+        }
+
+        private void CloseResults()
+        {
+
         }
 
         private ICommand _confirmLoginCommand;
@@ -36,10 +71,7 @@ namespace VetClinic.ViewModel
             }
         }
 
-        private bool canExecute()
-        {
-            return true;
-        }
+        
 
         private void LoginUser()
         {
@@ -75,6 +107,7 @@ namespace VetClinic.ViewModel
         private void BackToMainWindow()
         {
             wr.CloseWindow();
+            lw.CloseWindow();
         }
 
 
@@ -97,7 +130,10 @@ namespace VetClinic.ViewModel
 
 
 
-        
+        private bool canExecute()
+        {
+            return true;
+        }
 
 
     }

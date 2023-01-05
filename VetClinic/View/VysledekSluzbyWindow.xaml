@@ -1,17 +1,22 @@
-﻿<Window x:Class="VetClinic.View.VysledekSluzby"
+﻿<Window x:Class="VetClinic.View.VysledekSluzbyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic.View"
+        xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
-        Title="VysledekSluzby" Height="600" Width="450">
+        Title="VysledekSluzby" MaxHeight="600" MaxWidth="450" MinHeight="600" MinWidth="450">
+    <Window.DataContext>
+        <viewModel:MainViewModel />
+    </Window.DataContext>
+    
     <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="109,50,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="111,104,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="111,147,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="109,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="Jmeno" HorizontalAlignment="Left" Margin="109,50,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="jmenoTextBox" HorizontalAlignment="Center" Margin="0,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="hotovaCheckBox" Content="Hotova" HorizontalAlignment="Left" Margin="111,104,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="priprvnaCheckBox" Content="Připravena" HorizontalAlignment="Left" Margin="111,147,0,0" VerticalAlignment="Top"/>
+        <Label Content="D" HorizontalAlignment="Left" Margin="109,191,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Center" Margin="0,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="31,246,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="87,250,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.147,0.578"/>
@@ -27,7 +32,7 @@
         <TextBox HorizontalAlignment="Left" Margin="298,335,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="87,382,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="128,516,0,0" VerticalAlignment="Top" Width="213" Height="33"/>
+        <Button Command="{Binding AddResultsCommand}" Content="Button" HorizontalAlignment="Left" Margin="128,516,0,0" VerticalAlignment="Top" Width="213" Height="33"/>
 
     </Grid>
 </Window>

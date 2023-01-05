@@ -16,6 +16,11 @@ namespace VetClinic
             {
                 return;
             }
+            if (ListOfWindows.getRegWindow() != null)
+            {
+                RegistrationWindowService rw = new RegistrationWindowService();
+                rw.CloseWindow();
+            }
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();
             ListOfWindows.AddWindow(loginWindow);
@@ -29,6 +34,7 @@ namespace VetClinic
             string password = loginWindow.password.Text;
 
 
+
             // ---
 
             return false;
@@ -36,8 +42,13 @@ namespace VetClinic
 
         public void CloseWindow()
         {
+            if (ListOfWindows.getLoginWindow() == null) { 
+                return;
+            }
+
             ListOfWindows.getLoginWindow().Close();
             ListOfWindows.RemoveWindow(ListOfWindows.getLoginWindow());
+            
         }
 
         

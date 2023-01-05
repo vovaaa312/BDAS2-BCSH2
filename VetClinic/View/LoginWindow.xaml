@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VetClinic.View"
         xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="400" Width="300">
+        Title="LoginWindow" MinHeight="400" MinWidth="300" MaxHeight="400" MaxWidth="300">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
@@ -26,16 +26,17 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="39*" />
+                <RowDefinition Height="41*"/>
             </Grid.RowDefinitions>
 
-            <Button Command="{Binding ConfirmLoginCommand}" Grid.Row="0" Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-            <Button Command="{Binding RegistrationCommand}" Grid.Row="0" Grid.Column="1" Content="Registration" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+            
+            <Button Command="{Binding BackToMainWindowCommand}" Grid.Row="0" Grid.Column="0" Content="Back" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+            <Button Command="{Binding RegistrationCommand}" Grid.Column="1" Content="Registration" HorizontalAlignment="Center"  VerticalAlignment="Center" />
 
         </Grid>
 
-
+        <Button Command="{Binding ConfirmLoginCommand}" Grid.Row="4" Content="Login" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
         <TextBox x:Name="login" Grid.Row="2" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
         <TextBox x:Name="password" Grid.Row="3" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Background="#FFBDBDBD"/>
 
