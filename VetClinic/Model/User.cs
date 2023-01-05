@@ -11,6 +11,7 @@ namespace VetClinic.Model
         //Hello world
         //Hello world
         //Hello world
+        //asdasd
         public string Email { get; set; }
         public string Password { get; set; }
         public bool IsAdmin { get; set; }
