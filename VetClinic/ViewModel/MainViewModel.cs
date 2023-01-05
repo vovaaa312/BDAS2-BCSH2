@@ -19,6 +19,8 @@ namespace VetClinic.ViewModel
             lw.CloseWindow();
         }
 
+        
+
         private ICommand _addResultsCommand;
         public ICommand AddResultsCommand
         {

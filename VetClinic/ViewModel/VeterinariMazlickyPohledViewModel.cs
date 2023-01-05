@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using VetClinic.Model;
 
 namespace VetClinic.ViewModel
@@ -22,6 +23,34 @@ namespace VetClinic.ViewModel
             get;
             set;
         }
+
+        private VeterinariMazlickyPohled selectedItem;
+        public VeterinariMazlickyPohled SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                selectedItem = value;
+            }
+        }
+
+        private ICommand _deleteAnimalCommand;
+        public ICommand DeleteAnimalCommand
+        {
+            get
+            {
+                return _deleteAnimalCommand ?? (_deleteAnimalCommand = new CommandHandler(() => DeleteAnimal(), canExecute()));
+            }
+        }
+
+        private void DeleteAnimal()
+        {
+            VeterinariMazlicky.Remove(selectedItem);
+        }
+
 
         public void LoadVeterinariMazlicky() {
             ObservableCollection<VeterinariMazlickyPohled> veterinariMazlicky = new ObservableCollection<VeterinariMazlickyPohled>();
