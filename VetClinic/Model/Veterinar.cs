@@ -37,5 +37,7 @@ namespace VetClinic.Model
         {
             return base.ToString();
         }
+
+        //nam pizda
     }
 }
