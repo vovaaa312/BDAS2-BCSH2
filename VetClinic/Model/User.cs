@@ -20,5 +20,7 @@ namespace VetClinic.Model
             Password = password;
             IsAdmin = isAdmin;
         }
+
+        //kdfksdhfskdf
     }
 }
