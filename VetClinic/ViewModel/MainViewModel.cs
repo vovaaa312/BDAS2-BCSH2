@@ -13,7 +13,7 @@ namespace VetClinic.ViewModel
         public MainViewModel() {
         }
 
-        public void Window_Closing(object sender, CancelEventArgs e)
+        public void onClosing(object sender, CancelEventArgs e)
         {
             wr.CloseWindow();
             lw.CloseWindow();
