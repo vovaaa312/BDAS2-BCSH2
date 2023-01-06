@@ -17,9 +17,9 @@ namespace VetClinic.View
     /// <summary>
     /// Логика взаимодействия для PridaniNovePetkartyBezMajitele.xaml
     /// </summary>
-    public partial class PridaniNovePetkartyBezMajitele : Window
+    public partial class PridaniNovePetkartyBezMajiteleWindow : Window
     {
-        public PridaniNovePetkartyBezMajitele()
+        public PridaniNovePetkartyBezMajiteleWindow()
         {
             InitializeComponent();
         }
