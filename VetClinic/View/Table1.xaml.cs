@@ -24,5 +24,7 @@ namespace VetClinic.View
         {
             InitializeComponent();
         }
+
+        
     }
 }

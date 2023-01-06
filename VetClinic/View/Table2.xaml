@@ -35,8 +35,8 @@
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <Button Grid.Column="1" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Content="Nova faktura" Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Content="Odebrat fakturu" Grid.Column="1" Height="30" Width="103" VerticalAlignment="Center" HorizontalAlignment="Center" />
             <Button Grid.Column="2" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
             <CheckBox Grid.Column="6"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40,0" />
             <Label Content="Nový Klient" Grid.Column="6" Margin="20,0,0,0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" />
