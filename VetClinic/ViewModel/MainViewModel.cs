@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
 using VetClinic.Model;
@@ -7,11 +9,18 @@ namespace VetClinic.ViewModel
 {
     public class MainViewModel
     {
-        
+        readonly PridaniNovePetkartyBezMajiteleWindowService pnpbmw = new PridaniNovePetkartyBezMajiteleWindowService();
+        readonly PridaniNovePetkartyWindowService pnpv = new PridaniNovePetkartyWindowService();
         readonly RegistrationWindowService wr = new RegistrationWindowService();
         readonly LoginWindowService lw = new LoginWindowService();
+
+
         public MainViewModel() {
+            LoadOddeleni();
+            LoadPosice();
         }
+
+        
 
         public void onClosing(object sender, CancelEventArgs e)
         {
@@ -129,8 +138,30 @@ namespace VetClinic.ViewModel
         {
             wr.ConfirmRegistr();
         }
+        private ObservableCollection<Oddeleni> _oddeleni;
 
+        public ObservableCollection<Oddeleni> oddeleni
+        {
+            get { return _oddeleni; }
+            set { _oddeleni = value; }
+        }
+        private Oddeleni _soddeleni;
 
+        public Oddeleni SOddeleni
+        {
+            get { return _soddeleni; }
+            set { _soddeleni = value; }
+        }
+
+        private void LoadPosice()
+        {
+            //TODO select all pozice, or do it with hands
+        }
+
+        private void LoadOddeleni()
+        {
+            //TODO select all pozice, or do it with hands
+        }
 
         private bool canExecute()
         {

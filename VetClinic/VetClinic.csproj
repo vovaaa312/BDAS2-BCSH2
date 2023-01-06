@@ -101,7 +101,6 @@
     <Compile Include="Model\Klinika.cs" />
     <Compile Include="Model\Krev.cs" />
     <Compile Include="Model\Majitel.cs" />
-    <Compile Include="Model\Mazlicek.cs" />
     <Compile Include="Model\Oddeleni.cs" />
     <Compile Include="Model\PetKarta.cs" />
     <Compile Include="Model\Veterinar.cs" />
@@ -109,25 +108,23 @@
     <Compile Include="Model\VysledekSluzby.cs" />
     <Compile Include="Model\Zvire.cs" />
     <Compile Include="Model\CommandHendler.cs" />
+    <Compile Include="PridaniNovePetkartyBezMajiteleWindowService.cs" />
+    <Compile Include="PridaniNovePetkartyWindowService.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\RegistrationViewModel.cs" />
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariVysledkyPohledViewModel.cs" />
-    <Compile Include="View\Filtr.xaml.cs">
-      <DependentUpon>Filtr.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\KlinikaView.xaml.cs">
       <DependentUpon>KlinikaView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\PridaniNovePetkarty.xaml.cs">
-      <DependentUpon>PridaniNovePetkarty.xaml</DependentUpon>
+    <Compile Include="View\PridaniNovePetkartyWindow.xaml.cs">
+      <DependentUpon>PridaniNovePetkartyWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\PridaniNovePetkartyBezMajitele.xaml.cs">
-      <DependentUpon>PridaniNovePetkartyBezMajitele.xaml</DependentUpon>
+    <Compile Include="View\PridaniNovePetkartyBezMajiteleWindow.xaml.cs">
+      <DependentUpon>PridaniNovePetkartyBezMajiteleWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
@@ -142,10 +139,6 @@
       <DependentUpon>VysledekSluzbyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegistrationWindowService.cs" />
-    <Page Include="View\Filtr.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -166,11 +159,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\PridaniNovePetkarty.xaml">
+    <Page Include="View\PridaniNovePetkartyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PridaniNovePetkartyBezMajitele.xaml">
+    <Page Include="View\PridaniNovePetkartyBezMajiteleWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -55,8 +55,8 @@
                 </ListView.View>
             </ListView>
 
-            <Button Content="Registrace" Command="{Binding RegistrationCommand}" Grid.Row="1" Content="Login" Width="80"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button Content="Login" Command="{Binding LoginCommand}" Grid.Row="1" Content="Login" Width="80"  HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Button Content="Registrace" Command="{Binding RegistrationCommand}" Grid.Row="1"  Width="80"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Content="Login" Command="{Binding LoginCommand}" Grid.Row="1" Width="80"  HorizontalAlignment="Right" VerticalAlignment="Center"/>
             
         </Grid>
         <Grid.Background>

@@ -42,13 +42,14 @@ namespace VetClinic.ViewModel
         {
             get
             {
-                return _deleteAnimalCommand ?? (_deleteAnimalCommand = new CommandHandler(() => DeleteAnimal(), canExecute()));
+                return _deleteAnimalCommand ?? (_deleteAnimalCommand = new CommandHandler(() => DeleteAnimal(), true));
             }
         }
 
         private void DeleteAnimal()
         {
             VeterinariMazlicky.Remove(selectedItem);
+            //TODO Delete from database
         }
 
 

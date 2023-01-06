@@ -128,14 +128,14 @@ namespace VetClinic
 
         public void CloseWindow()
         {
-            if (ListOfWindows.getRegWindow() == null)
+            var window = ListOfWindows.getRegWindow();
+
+            if (window == null)
             {
                 return;
             }
-
-
-            ListOfWindows.getRegWindow().Close();
-            ListOfWindows.RemoveWindow(ListOfWindows.getRegWindow());
+            window.Close();
+            ListOfWindows.RemoveWindow(window);
            
 }
 

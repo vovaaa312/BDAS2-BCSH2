@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace VetClinic.View
 {
     /// <summary>
-    /// Логика взаимодействия для Filtr.xaml
+    /// Логика взаимодействия для PridaniNovePetkarty.xaml
     /// </summary>
-    public partial class Filtr : UserControl
+    public partial class PridaniNovePetkartyWindow : Window
     {
-        public Filtr()
+        public PridaniNovePetkartyWindow()
         {
             InitializeComponent();
         }

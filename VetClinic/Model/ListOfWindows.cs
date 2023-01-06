@@ -60,5 +60,31 @@ namespace VetClinic.Model
             }
             return iw;
         }
+
+        public static PridaniNovePetkartyWindow GetPridaniNovePetkartyWindow() {
+            PridaniNovePetkartyWindow iw = null;
+            foreach (Window window in windows)
+            {
+                if (window.GetType() == new PridaniNovePetkartyWindow().GetType())
+                {
+                    iw = (PridaniNovePetkartyWindow)window;
+                }
+            }
+            return iw;
+        }
+
+        public static PridaniNovePetkartyBezMajiteleWindow GetPridaniNovePetkartyBezMajiteleWindow()
+        {
+            PridaniNovePetkartyBezMajiteleWindow iw = null;
+            foreach (Window window in windows)
+            {
+                if (window.GetType() == new PridaniNovePetkartyBezMajiteleWindow().GetType())
+                {
+                    iw = (PridaniNovePetkartyBezMajiteleWindow)window;
+                }
+            }
+            return iw;
+        }
+
     }
 }
