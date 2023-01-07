@@ -44,6 +44,9 @@ namespace VetClinic
 
             if (window.datumNarozeniDatePicker.SelectedDate.HasValue) nastup = window.datumNarozeniDatePicker.SelectedDate.Value;
             if (window.datumPropusteniDatePicker.SelectedDate.HasValue) propusteni = window.datumPropusteniDatePicker.SelectedDate.Value;
+
+            bool isCorrect = jmeno_majitele.Length > 0 && druh_zvire != null && jmeno_majitele.Length > 0 && prijmeni_majitele.Length > 0
+                            && IsDigitsOnly(tel_cislo) && IsValidEmail(email) && mesto.Length > 0 && cislo_ulice >= 0;
         }
 
         private static bool IsValidEmail(string email)
@@ -88,6 +91,17 @@ namespace VetClinic
             {
                 return false;
             }
+        }
+
+        private bool IsDigitsOnly(string str)
+        {
+            foreach (char c in str)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+
+            return true;
         }
 
         public void CloseWindow()
