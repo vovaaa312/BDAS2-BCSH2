@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using VetClinic.Model;
 
@@ -63,7 +64,7 @@ namespace VetClinic.ViewModel
 
         private void DeleteAnimal()
         {
-            VeterinariMazlicky.Remove(selectedItem);
+            
             string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
                        "user id=st64150;password=vova0107;" +
                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
@@ -71,7 +72,25 @@ namespace VetClinic.ViewModel
             OracleConnection con = new OracleConnection(constr);
             con.Open();
 
-            con.Close();
+            OracleCommand odeberPetKartuCom = new OracleCommand("ODEBIRANI_PET_KARTY", con);
+            odeberPetKartuCom.CommandType = System.Data.CommandType.StoredProcedure;
+
+            //MAZLICEK, EMAIL, PRIJMENI
+
+            string mazlicek = selectedItem.Jmeno_mazlicek.ToString();
+            string prijmeni = selectedItem.Primeni_majitele.ToString();
+            string email = selectedItem.Email.ToString();
+
+
+
+            odeberPetKartuCom.Parameters.Add("MAZLICEK", OracleDbType.Varchar2).Value = mazlicek;
+            odeberPetKartuCom.Parameters.Add("EMAIL", OracleDbType.Varchar2).Value = email;
+            odeberPetKartuCom.Parameters.Add("PRIJMENI", OracleDbType.Varchar2).Value = prijmeni;
+
+            OracleDataAdapter da = new OracleDataAdapter(odeberPetKartuCom);
+            odeberPetKartuCom.ExecuteNonQuery();
+
+            con.Close(); VeterinariMazlicky.Remove(selectedItem);
             //TODO Delete from database
         }
 
@@ -109,7 +128,7 @@ namespace VetClinic.ViewModel
                      Primeni_majitele = readerView["PRIJMENI_MAJITEL"].ToString(),
                      Tel_cislo = readerView["TEL_CISLO"].ToString(),
                      
-                     Emeil = readerView["EMAIL"].ToString(),
+                     Email = readerView["EMAIL"].ToString(),
                      Nazev_mesta = readerView["NAZEV_MESTA"].ToString(),
                      Nazev_ulice = readerView["NAZEV_ULICE"].ToString(),
                      

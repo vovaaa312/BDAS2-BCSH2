@@ -24,7 +24,7 @@
                 <DataGridTextColumn x:Name="Jmeno_majitele" Binding="{Binding Path=Jmeno_majitele}" Header="Jmeno" Width="60" />
                 <DataGridTextColumn x:Name="Primeni_majitele" Binding="{Binding Path=Primeni_majitele}" Header="Prijmeni" Width="70" />
                 <DataGridTextColumn x:Name="Telefon" Binding="{Binding Path=Tel_cislo}" Header="Telefon" Width="80" />
-                <DataGridTextColumn x:Name="Emeil" Binding="{Binding Path=Emeil}" Header="Email" Width="180" />
+                <DataGridTextColumn x:Name="Email" Binding="{Binding Path=Email}" Header="Email" Width="180" />
                 <DataGridTextColumn x:Name="Mesto" Binding="{Binding Path=Nazev_mesta}" Header="Mesto" Width="90" />
                 <DataGridTextColumn x:Name="Ulice" Binding="{Binding Path=Nazev_ulice}" Header="Ulice" Width="90" />
                 <DataGridTextColumn x:Name="Cislo" Binding="{Binding Path=Cislo_ulice}" Header="Cislo" Width="35" />
