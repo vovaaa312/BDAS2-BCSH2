@@ -137,6 +137,9 @@
       <DependentUpon>VysledekSluzbyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegistrationWindowService.cs" />
+    <Compile Include="View\Vysledky.xaml.cs">
+      <DependentUpon>Vysledky.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -178,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\VysledekSluzbyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Vysledky.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

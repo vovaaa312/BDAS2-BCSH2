@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="VetClinic.View.Vysledky"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VetClinic.View"
+             xmlns:tableData = "clr-namespace:VetClinic.ViewModel"
+             mc:Ignorable="d"  
+             d:DesignHeight="800" d:DesignWidth="1174">
+
+    <UserControl.DataContext>
+        <tableData:VeterinariVysledkyPohledViewModel/>
+    </UserControl.DataContext>
+
+    <Grid Height="750" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="650"/>
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariVysledky}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Jmeno_mazlicek}" Header="Jmeno mazlicka" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=JeHotovy}" Header="Hotova" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=JePlanovany}" Header="Planovana" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=Datum_zacatku}" Header="Zacatek" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=Datum_ukonceni}" Header="Ukonceni" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=Glukoza}" Header="Glukoza" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=Bilkovina}" Header="Bilkovina" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=Mocovina}" Header="Mocovina" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=Bilirubin}" Header="Bilirubin" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=RBC}" Header="RBC" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=HGB}" Header="HGB" Width="100" />
+                <DataGridTextColumn Binding="{Binding Path=HCT}" Header="HCT" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="Nova faktura" Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Content="Odebrat fakturu" Grid.Column="1" Height="30" Width="103" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Grid.Column="2" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <CheckBox Grid.Column="6"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40,0" />
+            <Label Content="NovÃ½ Klient" Grid.Column="6" Margin="20,0,0,0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" />
+            <ComboBox Grid.Column="7" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
+    </Grid>
+</UserControl>

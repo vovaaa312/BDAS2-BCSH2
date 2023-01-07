@@ -39,6 +39,13 @@
             
 
 
+            <TabItem Header="Vysledky">
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+                    <view:Vysledky/>
+                </Grid>
+            </TabItem>
+
         </TabControl>
 
         <Grid Grid.Column="0" HorizontalAlignment="Center" Width="230">
