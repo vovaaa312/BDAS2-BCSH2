@@ -89,6 +89,9 @@ namespace VetClinic
                     regCom.Parameters.Add("TEL_CISLO", OracleDbType.Varchar2).Value = tel;
                     regCom.Parameters.Add("EMAIL", OracleDbType.Varchar2).Value = email;
                     regCom.Parameters.Add("PLAT", OracleDbType.Int64).Value = 27000;
+
+                    //TODO FIX Datetime.now to datumNarozeni
+
                     regCom.Parameters.Add("NASTUP", OracleDbType.Date).Value = DateTime.Now;
                     regCom.Parameters.Add("NAROZENI", OracleDbType.Date).Value = DateTime.Now;
                     regCom.Parameters.Add("SPECIALIZACE", OracleDbType.Varchar2).Value = "Kastrator";

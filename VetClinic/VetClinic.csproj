@@ -112,9 +112,6 @@
     <Compile Include="ViewModel\VeterinariMazlickyPohledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariFakturyPoledViewModel.cs" />
     <Compile Include="ViewModel\VeterinariVysledkyPohledViewModel.cs" />
-    <Compile Include="View\KlinikaView.xaml.cs">
-      <DependentUpon>KlinikaView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -152,10 +149,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\KlinikaView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

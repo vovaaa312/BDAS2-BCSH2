@@ -12,7 +12,7 @@
     </Window.DataContext>
 
     <Grid>
-        <Button Command="{Binding AddPacientCard2}" Content="Přidej" HorizontalAlignment="Left" Margin="404,294,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+        <Button Command="{Binding AddNewPetCard2Command}" Content="Přidej" HorizontalAlignment="Left" Margin="404,294,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
         <Button Command="{Binding BackToMainWindowCommand}" Content="Back" HorizontalAlignment="Left" Margin="125,294,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
 
         <Label Content="Jméno mazlička:" HorizontalAlignment="Left" Margin="48,108,0,0" VerticalAlignment="Top"/>

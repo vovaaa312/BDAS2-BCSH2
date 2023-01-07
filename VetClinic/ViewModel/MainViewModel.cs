@@ -121,8 +121,22 @@ namespace VetClinic.ViewModel
             lw.CloseWindow();
         }
 
+        private ICommand _backToMainWindowFromAddPetCard1Command;
+        public ICommand BackToMainWindowFromAddPetCard1Command
+        {
+            get
+            {
+                return _backToMainWindowFromAddPetCard1Command ?? (_backToMainWindowFromAddPetCard1Command = new CommandHandler(() => BackToMainWindowFromAddPetCard1(), canExecute()));
+            }
+        }
 
-       
+        private void BackToMainWindowFromAddPetCard1()
+        {
+            pnpv.CloseWindow();
+        }
+
+
+
 
         private ICommand _confirmRegistrationCommand;
         public ICommand ConfirmRegistrationCommand

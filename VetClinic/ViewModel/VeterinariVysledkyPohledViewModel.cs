@@ -49,7 +49,7 @@ namespace VetClinic.ViewModel
                     
                     veterinariVysledky.Add(new VeterinariVysledkyPohled { 
                         Jmeno_mazlicek = readerView["JMENO_MAZLICEK"].ToString(),
-                        JeHotovy = readerView["JEHOTOVY"].ToString(), 
+                        JeHotovy =readerView["JEHOTOVY"].ToString(), 
                         JePlanovany = readerView["JEPLANOVANA"].ToString(),
                         Datum_zacatku = readerView["DATUM_ZACATKU"].ToString(),
                         Datum_ukonceni = readerView["DATUM_UKONCENI"].ToString(),
