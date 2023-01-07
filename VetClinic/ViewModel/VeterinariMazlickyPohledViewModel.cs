@@ -90,8 +90,8 @@ namespace VetClinic.ViewModel
             OracleDataAdapter da = new OracleDataAdapter(odeberPetKartuCom);
             odeberPetKartuCom.ExecuteNonQuery();
 
-            con.Close(); VeterinariMazlicky.Remove(selectedItem);
-            //TODO Delete from database
+            con.Close(); 
+            VeterinariMazlicky.Remove(selectedItem);
         }
 
 
