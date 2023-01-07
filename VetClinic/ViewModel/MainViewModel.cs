@@ -28,8 +28,6 @@ namespace VetClinic.ViewModel
             lw.CloseWindow();
         }
 
-        
-
         private ICommand _addResultsCommand;
         public ICommand AddResultsCommand
         {
@@ -41,8 +39,10 @@ namespace VetClinic.ViewModel
 
         private void AddResults()
         {
-            
+
         }
+
+        
 
         private ICommand _closeResultsCommand;
         public ICommand CloseResultsCommand

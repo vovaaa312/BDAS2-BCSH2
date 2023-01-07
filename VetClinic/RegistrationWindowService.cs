@@ -99,7 +99,7 @@ namespace VetClinic
                     regCom.Parameters.Add("PSC_KOD", OracleDbType.Int64).Value = psc;
                     regCom.Parameters.Add("STAT", OracleDbType.Varchar2).Value = stat;
 
-                    //regCom.CommandText = String.Format("CALL VLOZ_USER({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14});", heslo, jmeno, primeni, tel, email, 27000, OracleDate.MinValue, OracleDate.MinValue, "Kastrator", "Chirurgie", mesto, ulice, cislo, psc, stat);
+                    //Prihlaseni
                     User user = new User{ 
                         Email = email,
                         Password = heslo,
