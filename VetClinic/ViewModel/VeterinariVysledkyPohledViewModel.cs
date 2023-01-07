@@ -10,7 +10,7 @@ using VetClinic.Model;
 
 namespace VetClinic.ViewModel
 {
-    internal class VeterinariVysledkyPohledViewModel
+    public class VeterinariVysledkyPohledViewModel
     {
         public VeterinariVysledkyPohledViewModel() {
             LoadVeterinariVysledky();
@@ -25,6 +25,8 @@ namespace VetClinic.ViewModel
         private void LoadVeterinariVysledky()
         {
             ObservableCollection<VeterinariVysledkyPohled> veterinariVysledky = new ObservableCollection<VeterinariVysledkyPohled>();
+
+            
 
             string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
                         "user id=st64150;password=vova0107;" +
@@ -44,10 +46,11 @@ namespace VetClinic.ViewModel
 
             if (readerView.HasRows) {
                 while (readerView.Read()) {
+                    
                     veterinariVysledky.Add(new VeterinariVysledkyPohled { 
                         Jmeno_mazlicek = readerView["JMENO_MAZLICEK"].ToString(),
-                        JeHotovy = Boolean.Parse(readerView["JEHOTOVY"].ToString()), 
-                        JePlanovany = Boolean.Parse(readerView["JEPLANOVANA"].ToString()),
+                        JeHotovy = readerView["JEHOTOVY"].ToString(),
+                        JePlanovany = readerView["JEPLANOVANA"].ToString(),
                         Datum_zacatku = readerView["DATUM_ZACATKU"].ToString(),
                         Datum_ukonceni = readerView["DATUM_UKONCENI"].ToString(),
                         Glukoza = int.Parse(readerView["GLUKOZA"].ToString()),

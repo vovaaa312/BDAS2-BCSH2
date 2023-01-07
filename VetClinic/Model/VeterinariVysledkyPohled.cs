@@ -9,8 +9,8 @@ namespace VetClinic.Model
     public class VeterinariVysledkyPohled
     {
         public string Jmeno_mazlicek { get; set; }
-        public Boolean JeHotovy { get; set; }
-        public Boolean JePlanovany { get; set; }
+        public string JeHotovy { get; set; }
+        public string JePlanovany { get; set; }
         public string Datum_zacatku { get; set; }
         public string Datum_ukonceni { get; set; }
         public int Glukoza { get; set; }

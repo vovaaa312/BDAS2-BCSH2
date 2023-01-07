@@ -4,25 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetClinic.View"
+        xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
-        Title="PridaniNovePetkartyBezMajitele" Height="450" Width="600">
+        Title="PridaniNovePetkartyBezMajitele" MinHeight="450" MinWidth="600" MaxHeight="450" MaxWidth="600">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,342,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+        <Button Command="{Binding AddPacientCard2}" Content="Přidej" HorizontalAlignment="Left" Margin="404,294,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+        <Button Command="{Binding BackToMainWindowCommand}" Content="Back" HorizontalAlignment="Left" Margin="125,294,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+
+        <Label Content="Jméno mazlička:" HorizontalAlignment="Left" Margin="48,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum nástupu:" HorizontalAlignment="Left" Margin="48,218,0,0" VerticalAlignment="Top"/>
 
 
-        <Label Content="Jméno mazlička:" HorizontalAlignment="Left" Margin="36,156,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datum nástupu:" HorizontalAlignment="Left" Margin="36,231,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="153,112,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="jmenoMajiteleComboBox" HorizontalAlignment="Left" Margin="153,155,0,0" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="datumNarozeniDatePicker2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD" Margin="153,220,0,0"/>
 
-
-        <TextBox HorizontalAlignment="Left" Margin="141,160,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="141,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-
-
-        <Label Content="Typ zvire:" HorizontalAlignment="Left" Margin="309,156,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nazev oddělení:" HorizontalAlignment="Left" Margin="309,201,0,0" VerticalAlignment="Top"/>
-        <Label Content="Data výstupu:" HorizontalAlignment="Left" Margin="309,231,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="408,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox HorizontalAlignment="Left" Margin="408,160,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.126,0.426"/>
+        <Label Content="Jmeno majtele:" HorizontalAlignment="Left" Margin="48,148,0,0" VerticalAlignment="Top" Height="32" Width="87"/>
+        <Label Content="Typ zvire:" HorizontalAlignment="Left" Margin="321,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nazev oddělení:" HorizontalAlignment="Left" Margin="321,188,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data výstupu:" HorizontalAlignment="Left" Margin="321,218,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nazevOddeleniTextBox" HorizontalAlignment="Left" Margin="420,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="datumNarozeniDatePicker1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Background="#FFBDBDBD" Margin="420,220,0,0"/>
+        <ComboBox x:Name="typZvireComboBox" HorizontalAlignment="Left" Margin="420,112,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.126,0.426"/>
+        <ComboBox Name="primeniMajiteleComboBox" HorizontalAlignment="Left" Margin="153,192,0,0" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Primeni majitele:" HorizontalAlignment="Left" Margin="48,185,0,0" VerticalAlignment="Top" Height="32" Width="87"/>
     </Grid>
 </Window>

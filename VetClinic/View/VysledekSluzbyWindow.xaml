@@ -7,6 +7,7 @@
         xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
         Title="VysledekSluzby" MaxHeight="600" MaxWidth="450" MinHeight="600" MinWidth="450">
+    
     <Window.DataContext>
         <viewModel:MainViewModel />
     </Window.DataContext>
@@ -33,6 +34,5 @@
         <Label Content="Label" HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="87,382,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Button Command="{Binding AddResultsCommand}" Content="Button" HorizontalAlignment="Left" Margin="128,516,0,0" VerticalAlignment="Top" Width="213" Height="33"/>
-
     </Grid>
 </Window>

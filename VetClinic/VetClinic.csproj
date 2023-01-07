@@ -105,8 +105,6 @@
     <Compile Include="Model\PetKarta.cs" />
     <Compile Include="Model\Veterinar.cs" />
     <Compile Include="Model\VeterinariVysledkyPohled.cs" />
-    <Compile Include="Model\VysledekSluzby.cs" />
-    <Compile Include="Model\Zvire.cs" />
     <Compile Include="Model\CommandHendler.cs" />
     <Compile Include="PridaniNovePetkartyBezMajiteleWindowService.cs" />
     <Compile Include="PridaniNovePetkartyWindowService.cs" />

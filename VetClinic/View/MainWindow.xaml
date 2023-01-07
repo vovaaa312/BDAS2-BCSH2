@@ -36,6 +36,8 @@
                     <view:Table2/>
                 </Grid>
             </TabItem>
+            
+
 
         </TabControl>
 
