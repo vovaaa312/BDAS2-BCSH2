@@ -14,7 +14,7 @@ namespace VetClinic.Model
         public string Jmeno_majitele { get; set; }
         public string Primeni_majitele { get; set; }
         public string Tel_cislo { get; set; }
-        public string Emeil { get; set; }
+        public string Email { get; set; }
         public string Nazev_mesta { get; set; }
         public string Nazev_ulice { get; set; }
         public int Cislo_ulice { get; set; }
