@@ -26,8 +26,7 @@
             <TabItem Header="Tab1">
 
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
-
-                    <view:Table1 Loaded="Table1_Loaded"/>
+                    <view:Table1 />
                 </Grid>
             </TabItem>
             <TabItem Header="Tab2">
@@ -49,28 +48,20 @@
         </TabControl>
 
         <Grid Grid.Column="0" HorizontalAlignment="Center" Width="230">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="700" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <ListView Grid.Row="0" Name="TablesListView" d:ItemsSource="{d:SampleData ItemCount=5}"  SelectionChanged="ListView_SelectionChanged" Width="230">
-                <ListView.Background>
-                    <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
-                </ListView.Background>
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+            
 
             <Button Content="Registrace" Command="{Binding RegistrationCommand}" Grid.Row="1"  Width="80"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Button Content="Login" Command="{Binding LoginCommand}" Grid.Row="1" Width="80"  HorizontalAlignment="Right" VerticalAlignment="Center"/>
             
         </Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="Assets/papousek.png" Stretch="UniformToFill"/>
-        </Grid.Background>
+        
 
 
     </Grid>

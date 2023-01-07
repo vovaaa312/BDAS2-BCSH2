@@ -15,6 +15,7 @@ namespace VetClinic.ViewModel
 {
     public class VeterinariMazlickyPohledViewModel
     {
+        PridaniNovePetkartyWindowService pnws = new PridaniNovePetkartyWindowService();
         public VeterinariMazlickyPohledViewModel() {
             LoadVeterinariMazlicky();
         }
@@ -37,6 +38,20 @@ namespace VetClinic.ViewModel
             }
         }
 
+        private ICommand _addPetCard1Command;
+        public ICommand AddPetCard1Command
+        {
+            get
+            {
+                return _addPetCard1Command ?? (_addPetCard1Command = new CommandHandler(() => AddPetCard1(), true));
+            }
+        }
+
+        private void AddPetCard1()
+        {
+            pnws.CreateWindow();
+        }
+
         private ICommand _deleteAnimalCommand;
         public ICommand DeleteAnimalCommand
         {
@@ -56,7 +71,7 @@ namespace VetClinic.ViewModel
             OracleConnection con = new OracleConnection(constr);
             con.Open();
 
-
+            con.Close();
             //TODO Delete from database
         }
 

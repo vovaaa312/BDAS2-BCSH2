@@ -27,50 +27,7 @@ namespace VetClinic.View
         {
 
             InitializeComponent();
-
-            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
-                        "user id=st64150;password=vova0107;" +
-                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
-
-
-            OracleConnection con = new OracleConnection(constr);
-            con.Open();
-            //MessageBox.Show("Connected to Oracle Database", con.ServerVersion);
-
-
-
-            OracleCommand getAllTables = new OracleCommand();
-            getAllTables.Connection = con;
-            getAllTables.CommandText = "SELECT table_name FROM all_tables\r\nwhere owner = 'ST64150'";
-            OracleDataReader reader = getAllTables.ExecuteReader();
-
-
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    TablesListView.Items.Add(reader["TABLE_NAME"].ToString());
-                }
-            }
-            
-
-
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            MessageBox.Show(TablesListView.SelectedItem.ToString());
-        }
-
-        private void MainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Table1_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
