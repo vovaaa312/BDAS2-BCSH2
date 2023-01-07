@@ -59,13 +59,13 @@
         <Label Grid.Row="5" Grid.Column="1" Content="PSČ:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Grid.Row="6" Grid.Column="1"  Content="Nazev oddělení:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Grid.Row="7" Grid.Column="1"  Content="Data výstupu:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <DatePicker  Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <DatePicker x:Name="datumPropusteniDatePicker" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Right" Text="TextBox" VerticalAlignment="Center" Width="120"/>
         <TextBox x:Name="primeniMajiteleTextBox" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
         <TextBox x:Name="emailTextBox" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
         <TextBox x:Name="cisloUliceTextBox" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
         <TextBox x:Name="pscTextBox" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
         <ComboBox x:Name="nazevOddeleniComboBox" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Right" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <ComboBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="120" RenderTransformOrigin="0.126,0.426"/>
+        <ComboBox x:Name="druhZvire" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="120" RenderTransformOrigin="0.126,0.426"/>
         
     </Grid>
 </Window>
