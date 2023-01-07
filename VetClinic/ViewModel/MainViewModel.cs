@@ -28,6 +28,21 @@ namespace VetClinic.ViewModel
             lw.CloseWindow();
         }
 
+        private ICommand _addNewPetCard1Command;
+        public ICommand AddNewPetCard1Command
+        {
+            get
+            {
+                return _addNewPetCard1Command ?? (_addNewPetCard1Command = new CommandHandler(() => AddNewPetCard1(), canExecute()));
+            }
+        }
+
+        private void AddNewPetCard1()
+        {
+            pnpv.AddPetcard();
+        }
+
+
         private ICommand _addResultsCommand;
         public ICommand AddResultsCommand
         {
