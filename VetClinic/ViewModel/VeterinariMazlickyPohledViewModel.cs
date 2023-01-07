@@ -50,14 +50,7 @@ namespace VetClinic.ViewModel
             }
         }
 
-        private ICommand _addPetCard1Command;
-        public ICommand AddPetCard1Command
-        {
-            get
-            {
-                return _addPetCard1Command ?? (_addPetCard1Command = new CommandHandler(() => AddPetCard1(), true));
-            }
-        }
+ 
 
         private void AddPetCard1()
         {
@@ -82,7 +75,26 @@ namespace VetClinic.ViewModel
 
             OracleConnection con = new OracleConnection(constr);
             con.Open();
+            OracleCommand odeberPetKartuCom = new OracleCommand("ODEBIRANI_PET_KARTY", con);
+            odeberPetKartuCom.CommandType = System.Data.CommandType.StoredProcedure;
 
+            //MAZLICEK, EMAIL, PRIJMENI
+
+            string mazlicek = selectedItem.Jmeno_mazlicek.ToString();
+            string prijmeni = selectedItem.Primeni_majitele.ToString();
+            string email = selectedItem.Email.ToString();
+
+
+
+            odeberPetKartuCom.Parameters.Add("MAZLICEK", OracleDbType.Varchar2).Value = mazlicek;
+            odeberPetKartuCom.Parameters.Add("EMAIL", OracleDbType.Varchar2).Value = email;
+            odeberPetKartuCom.Parameters.Add("PRIJMENI", OracleDbType.Varchar2).Value = prijmeni;
+
+            OracleDataAdapter da = new OracleDataAdapter(odeberPetKartuCom);
+            odeberPetKartuCom.ExecuteNonQuery();
+
+            con.Close(); 
+            VeterinariMazlicky.Remove(selectedItem);
 
             //TODO Delete from database
         }
