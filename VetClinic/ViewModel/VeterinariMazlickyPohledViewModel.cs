@@ -27,6 +27,8 @@ namespace VetClinic.ViewModel
         }
 
         private VeterinariMazlickyPohled selectedItem;
+
+        //
         public VeterinariMazlickyPohled SelectedItem
         {
             get
