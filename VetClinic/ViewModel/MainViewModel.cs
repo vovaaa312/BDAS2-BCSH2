@@ -9,6 +9,8 @@ namespace VetClinic.ViewModel
 {
     public class MainViewModel
     {
+        readonly FakturyWindowService fws = new FakturyWindowService();
+        readonly VysledekSluzbyWindowService vsws = new VysledekSluzbyWindowService();
         readonly PridaniNovePetkartyBezMajiteleWindowService pnpbmw = new PridaniNovePetkartyBezMajiteleWindowService();
         readonly PridaniNovePetkartyWindowService pnpv = new PridaniNovePetkartyWindowService();
         readonly RegistrationWindowService wr = new RegistrationWindowService();
@@ -28,6 +30,34 @@ namespace VetClinic.ViewModel
             lw.CloseWindow();
         }
 
+        private ICommand _addNewFakturaCommand;
+        public ICommand AddNewFakturaCommand
+        {
+            get
+            {
+                return _addNewFakturaCommand ?? (_addNewFakturaCommand = new CommandHandler(() => AddNewFaktura(), canExecute()));
+            }
+        }
+
+        private void AddNewFaktura()
+        {
+            // TODO FakturaWindow Add btn logic
+        }
+
+        private ICommand _backToMainWindowFromFakturyCommand;
+        public ICommand BackToMainWindowFromFakturyCommand
+        {
+            get
+            {
+                return _backToMainWindowFromFakturyCommand ?? (_backToMainWindowFromFakturyCommand = new CommandHandler(() => BackToMainWindowFromFaktury(), canExecute()));
+            }
+        }
+
+        private void BackToMainWindowFromFaktury()
+        {
+            fws.CloseWindow();
+        }
+
         private ICommand _addNewPetCard1Command;
         public ICommand AddNewPetCard1Command
         {
@@ -43,35 +73,23 @@ namespace VetClinic.ViewModel
         }
 
 
-        private ICommand _addResultsCommand;
-        public ICommand AddResultsCommand
+        private ICommand _backToMainWindowFromAddResultsCommand;
+        public ICommand BackToMainWindowFromAddResultsCommand
         {
             get
             {
-                return _addResultsCommand ?? (_addResultsCommand = new CommandHandler(() => AddResults(), canExecute()));
+                return _backToMainWindowFromAddResultsCommand ?? (_backToMainWindowFromAddResultsCommand = new CommandHandler(() => BackToMainWindowFromAddResults(), canExecute()));
             }
         }
 
-        private void AddResults()
+        private void BackToMainWindowFromAddResults()
         {
-
+            vsws.CloseWindow();
         }
 
         
 
-        private ICommand _closeResultsCommand;
-        public ICommand CloseResultsCommand
-        {
-            get
-            {
-                return _closeResultsCommand ?? (_closeResultsCommand = new CommandHandler(() => CloseResults(), canExecute()));
-            }
-        }
-
-        private void CloseResults()
-        {
-
-        }
+       
 
         private ICommand _confirmLoginCommand;
         public ICommand ConfirmLoginCommand

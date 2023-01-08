@@ -34,6 +34,6 @@
         <Label Content="Label" HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="87,382,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Button Command="{Binding ConfirmResultsCommand}" Content="Button" HorizontalAlignment="Left" Margin="271,508,0,0" VerticalAlignment="Top" Width="126" Height="26"/>
-        <Button Command="{Binding BackToMainWindowFromAddResultsCommand}" Content="Back" Margin="60,508,310,50" />
+        <Button Command="{Binding BackToMainWindowFromAddResultsCommand}" Content="Back" Margin="60,508,310,0" Width="126" Height="26"/>
     </Grid>
 </Window>

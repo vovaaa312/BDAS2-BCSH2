@@ -35,8 +35,8 @@
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Content="Nova faktura" Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <Button Content="Odebrat fakturu" Grid.Column="1" Height="30" Width="103" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Command="{Binding AddFakturuCommand}" Content="Nova faktura" Grid.Column="0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Command="{Binding RemoveFakturuCommand}" Content="Odebrat fakturu" Grid.Column="1" Height="30" Width="103" VerticalAlignment="Center" HorizontalAlignment="Center" />
             
             
         </Grid>

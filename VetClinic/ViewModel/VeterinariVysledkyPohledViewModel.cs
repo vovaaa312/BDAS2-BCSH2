@@ -6,12 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using VetClinic.Model;
 
 namespace VetClinic.ViewModel
 {
     public class VeterinariVysledkyPohledViewModel
     {
+        VysledekSluzbyWindowService vsw = new VysledekSluzbyWindowService();
         public VeterinariVysledkyPohledViewModel() {
             LoadVeterinariVysledky();
         }
@@ -21,6 +23,26 @@ namespace VetClinic.ViewModel
             get;
             set;
         }
+
+
+        private ICommand _addResultsCommand;
+        public ICommand AddResultsCommand
+        {
+            get
+            {
+                return _addResultsCommand ?? (_addResultsCommand = new CommandHandler(() => AddResults(), true));
+            }
+        }
+
+
+
+        private void AddResults()
+        {
+            vsw.CreateWindow();
+        }
+
+
+
 
         private void LoadVeterinariVysledky()
         {
