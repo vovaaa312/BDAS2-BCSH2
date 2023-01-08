@@ -87,7 +87,7 @@ namespace VetClinic.ViewModel
 
 
             odeberPetKartuCom.Parameters.Add("MAZLICEK", OracleDbType.Varchar2).Value = mazlicek;
-            odeberPetKartuCom.Parameters.Add("EMAIL", OracleDbType.Varchar2).Value = email;
+            odeberPetKartuCom.Parameters.Add("EMAIL",    OracleDbType.Varchar2).Value = email;
             odeberPetKartuCom.Parameters.Add("PRIJMENI", OracleDbType.Varchar2).Value = prijmeni;
 
             OracleDataAdapter da = new OracleDataAdapter(odeberPetKartuCom);

@@ -35,27 +35,32 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="1" Content="Jmeno:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="jmenoTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="1" Content="Jmeno:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,2,83,0"/>
         <CheckBox Grid.Row="2" x:Name="hotovaCheckBox" Content="Hotova" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <CheckBox Grid.Row="2" Grid.Column="1" x:Name="priprvnaCheckBox" Content="Připravena" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Grid.Row="3" Content="D" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="4" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="5" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="6" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="7" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="8" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="9" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Label Grid.Row="10" Content="Label" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="10" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
-        <Button Grid.Row="12" Grid.Column="1" Command="{Binding AddNewResultsCommand}" Content="Back" Width="126" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button Grid.Row="12" Command="{Binding BackToMainWindowFromAddResultsCommand}" Content="Back" Width="126" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <CheckBox Grid.Row="2" Grid.Column="1" x:Name="planovanaCheckBox" Content="Planovana" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="3" Content="RBC" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="RBClabel" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="4" Content="HGB" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="HGBlabel" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="5" Content="HCT" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="HCTlabel" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="6" Content="GLUKOZA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="Glukozalabel" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="7" Content="BILKOVINY" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="Bilkovinylabel" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="8" Content="MOCOVINA" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="Mocovinalabel" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="9" Content="BILIRUBIN" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="Bilirubinlabel" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+        <Label Grid.Row="10" Content="Datum zacatku" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Row="13" Grid.Column="1" Command="{Binding AddNewResultsCommand}" Content="Ok" Width="126" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Grid.Row="13" Command="{Binding BackToMainWindowFromAddResultsCommand}" Content="Back" Width="126" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="JmenoMazlickaComboBox" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center"  Width="120"/>
+
+        <DatePicker x:Name="ZacatekDatePicker" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="10" VerticalAlignment="Center"/>
+        <Label Grid.Row="11" Content="Datum ukonceni" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <DatePicker x:Name="UkonceniDatePicker" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="11" VerticalAlignment="Center"/>
+        <Label Content="Prijmeni majitele" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <ComboBox x:Name="PrijmeniMajiteleComboBox" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"/>
     </Grid>
 </Window>
