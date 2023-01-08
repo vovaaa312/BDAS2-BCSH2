@@ -60,6 +60,8 @@ namespace VetClinic
                     //Call procedure VLOZ_USER
                     OracleCommand vlozVysledek = new OracleCommand("VLOZ_VYSLEDKY", con);
                     vlozVysledek.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    vlozVysledek.Parameters.Add("RBC");
                 }
                 catch (Exception ex) 
                 {
