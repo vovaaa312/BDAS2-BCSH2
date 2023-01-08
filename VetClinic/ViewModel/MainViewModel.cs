@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
 using VetClinic.Model;
+using Oracle.ManagedDataAccess.Client;
 
 namespace VetClinic.ViewModel
 {
@@ -20,9 +21,10 @@ namespace VetClinic.ViewModel
         public MainViewModel() {
             LoadOddeleni();
             LoadPosice();
+            LoadDruhZvire();
         }
 
-        
+
 
         public void onClosing(object sender, CancelEventArgs e)
         {
@@ -87,7 +89,7 @@ namespace VetClinic.ViewModel
             vsws.CloseWindow();
         }
 
-        
+
 
        
 
@@ -105,7 +107,7 @@ namespace VetClinic.ViewModel
             lw.Login();
         }
 
-        
+
         private ICommand _loginCommand;
         public ICommand LoginCommand
         {
@@ -115,14 +117,14 @@ namespace VetClinic.ViewModel
             }
         }
 
-        
+
 
         private void LoginUser()
         {
             lw.CreateWindow();
         }
 
-        
+
         private ICommand _registrationCommand;
         public ICommand RegistrationCommand
         {
@@ -137,7 +139,7 @@ namespace VetClinic.ViewModel
             wr.CreateWindow();
         }
 
-        
+
 
         private ICommand _backToMainWindowCommand;
         public ICommand BackToMainWindowCommand
@@ -185,19 +187,65 @@ namespace VetClinic.ViewModel
         {
             wr.ConfirmRegistr();
         }
-        private ObservableCollection<Oddeleni> _oddeleni;
+        private ObservableCollection<String> _oddeleni;
 
-        public ObservableCollection<Oddeleni> oddeleni
+        public ObservableCollection<String> Oddeleni
         {
             get { return _oddeleni; }
             set { _oddeleni = value; }
         }
-        private Oddeleni _soddeleni;
+        private String _soddeleni;
 
-        public Oddeleni SOddeleni
+        public String SOddeleni
         {
             get { return _soddeleni; }
             set { _soddeleni = value; }
+        }
+
+        private ObservableCollection<String> _druhZvire;
+
+        public ObservableCollection<String> DruhZvire 
+        {
+            get { return _druhZvire; }
+            set { _druhZvire = value; }
+        }
+
+        private String _sdruhZvire;
+
+        public String SdruhZvire
+        {
+            get { return _sdruhZvire; }
+            set { _sdruhZvire = value; }
+        }
+
+        private void LoadDruhZvire() 
+        {
+            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
+                        "user id=st64150;password=vova0107;" +
+                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
+
+            OracleConnection con = new OracleConnection(constr);
+            con.Open();
+
+            OracleCommand getAllZvire = new OracleCommand();
+            getAllZvire.Connection = con;
+            getAllZvire.CommandText = "SELECT NAZEV FROM ZVIRE";
+            OracleDataReader reader = getAllZvire.ExecuteReader();
+
+
+            ObservableCollection<String> tmp = new ObservableCollection<String>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Oddeleni odd = new Oddeleni { nazev = reader["NAZEV"].ToString() };
+
+                    tmp.Add(odd.nazev);
+                    DruhZvire = tmp;
+                }
+            }
+
+            con.Close();
         }
 
         private void LoadPosice()
@@ -207,7 +255,35 @@ namespace VetClinic.ViewModel
 
         private void LoadOddeleni()
         {
-            //TODO select all pozice, or do it with hands
+            // select all pozice, or do it with hands
+            //_soddeleni
+
+            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
+                        "user id=st64150;password=vova0107;" +
+                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
+
+            OracleConnection con = new OracleConnection(constr);
+            con.Open();
+
+            OracleCommand getAllOddeleni= new OracleCommand();
+            getAllOddeleni.Connection = con;
+            getAllOddeleni.CommandText = "SELECT NAZEV_ODDELENI FROM ODDELENI";
+            OracleDataReader reader = getAllOddeleni.ExecuteReader();
+
+
+            ObservableCollection<String> tmp = new ObservableCollection<String>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Oddeleni odd = new Oddeleni { nazev = reader["NAZEV_ODDELENI"].ToString() };
+                    
+                    tmp.Add(odd.nazev);
+                    Oddeleni = tmp;
+                }
+            }
+
+            con.Close();
         }
 
         private bool canExecute()
