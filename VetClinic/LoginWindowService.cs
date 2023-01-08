@@ -79,13 +79,15 @@ namespace VetClinic
 
         public void CloseWindow()
         {
-            if (ListOfWindows.getLoginWindow() == null) { 
+            var window = ListOfWindows.getLoginWindow();
+
+            if (window == null)
+            {
                 return;
             }
+            window.Close();
+            ListOfWindows.RemoveWindow(window);
 
-            ListOfWindows.getLoginWindow().Close();
-            ListOfWindows.RemoveWindow(ListOfWindows.getLoginWindow());
-            
         }
 
         
