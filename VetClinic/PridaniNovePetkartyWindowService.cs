@@ -105,7 +105,7 @@ namespace VetClinic
             string email, string mesto, string ulice, string cislo_ulice, string psc, string stat, string nazev_oddeleni, DateTime? nastup, DateTime? propusteni) {
             string wrongFields = "";
             
-           // if (druh_zvire == null) wrongFields += "Druh zvire\n";
+            if (druh_zvire == null) wrongFields += "Druh zvire\n";
             if (jmeno_mazlicka.Length <= 0) wrongFields += "Jmeno mazlicka\n";
             if (prijmeni_majitele.Length <=0) wrongFields += "Prijmeni majitele\n";
             if (jmeno_majitele.Length <= 0) wrongFields += "Jmeno majitele\n";
@@ -116,7 +116,7 @@ namespace VetClinic
             if (!IsDigitsOnly(cislo_ulice)) wrongFields += "Cislo ulice\n";
             if (!IsDigitsOnly(psc) || psc.ToString().Length != 5) wrongFields += "PSC\n";
             if (stat.Length <= 0) wrongFields += "Stat\n";
-            //if (nazev_oddeleni == null) wrongFields += "Oddeleni\n";
+            if (nazev_oddeleni == null) wrongFields += "Oddeleni\n";
             if (nastup == null) wrongFields += "Datum nastupu\n";
             if (nastup > propusteni) wrongFields += "Datum nastup nemuze byt pozdeji datumu propusteni\n";
 
