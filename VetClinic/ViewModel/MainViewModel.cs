@@ -329,7 +329,7 @@ namespace VetClinic.ViewModel
                     DruhZvire = tmp;
                 }
             }
-
+            
             con.Close();
         }
 
