@@ -365,7 +365,6 @@ namespace VetClinic.ViewModel
             con.Close();
         }
 
-
         private void LoadOddeleni()
         {
             // select all pozice, or do it with hands
