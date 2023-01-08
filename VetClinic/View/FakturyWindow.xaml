@@ -25,19 +25,19 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="Jmen mazlicka:" Grid.Row="0" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Label Content="Nazev sluzby:" Grid.Row="1" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Label Content="Datum vystaveni:" Grid.Row="2" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Label Content="Konecna cena:" Grid.Row="3" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Label Content="Oddeleni:" Grid.Row="4" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Jmen mazlicka:" Grid.Row="0" Width="120" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Nazev sluzby:" Grid.Row="1" Width="120" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Datum vystaveni:" Grid.Row="2" Width="120" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Konecna cena:" Grid.Row="3" Width="120" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Oddeleni:" Grid.Row="4" Width="120" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         
-        <ComboBox x:Name="jmenoMazlickaComboBox" Grid.Row="0" Grid.Column="1" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <ComboBox x:Name="nazevSluzbyComboBox" Grid.Row="1" Grid.Column="1" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox x:Name="jmenoMazlickaComboBox" Grid.Row="0" Grid.Column="1" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox x:Name="nazevSluzbyComboBox" Grid.Row="1" Grid.Column="1" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <DatePicker Grid.Row="2" Grid.Column="1" Width="150" Height="40" />
-        <TextBox x:Name="konecnaCena" Grid.Row="3" Grid.Column="1" Width="150" Height="40"/>
-        <ComboBox x:Name="oddeleniComboBox" Grid.Row="4" Grid.Column="1" Width="150" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="konecnaCena" Grid.Row="3" Grid.Column="1" Width="150" Height="25"/>
+        <ComboBox x:Name="oddeleniComboBox" Grid.Row="4" Grid.Column="1" Width="150" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <Button Command="{Binding AddNewFakturaCommand}" Content="Pridej" Grid.Row="6" Grid.Column="1" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Command="{Binding AddFakturaCommand}" Content="Pridej" Grid.Row="6" Grid.Column="1" Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Command="{Binding BackToMainWindowFromFakturyCommand}" Content="Back" Grid.Row="6"  Width="100" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
     </Grid>

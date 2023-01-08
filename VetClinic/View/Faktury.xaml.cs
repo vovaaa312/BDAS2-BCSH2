@@ -18,9 +18,9 @@ namespace VetClinic.View
     /// <summary>
     /// Логика взаимодействия для Table2.xaml
     /// </summary>
-    public partial class Table2 : UserControl
+    public partial class Faktury : UserControl
     {
-        public Table2()
+        public Faktury()
         {
             InitializeComponent();
         }

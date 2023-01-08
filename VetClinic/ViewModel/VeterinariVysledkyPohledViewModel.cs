@@ -6,12 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using VetClinic.Model;
 
 namespace VetClinic.ViewModel
 {
     public class VeterinariVysledkyPohledViewModel
     {
+        VysledekSluzbyWindowService vsw = new VysledekSluzbyWindowService();
         public VeterinariVysledkyPohledViewModel() {
             LoadVeterinariVysledky();
         }
@@ -21,6 +23,56 @@ namespace VetClinic.ViewModel
             get;
             set;
         }
+
+        private VeterinariVysledkyPohled selectedItem;
+
+
+        public VeterinariVysledkyPohled SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                selectedItem = value;
+            }
+        }
+
+
+        private ICommand _addResultsCommand;
+        public ICommand AddResultsCommand
+        {
+            get
+            {
+                return _addResultsCommand ?? (_addResultsCommand = new CommandHandler(() => AddResults(), true));
+            }
+        }
+
+
+
+        private void AddResults()
+        {
+            vsw.CreateWindow();
+        }
+
+        private ICommand _removeResultCommand;
+        public ICommand RemoveResultCommand
+        {
+            get
+            {
+                return _removeResultCommand ?? (_removeResultCommand = new CommandHandler(() => RemoveResult(), true));
+            }
+        }
+
+
+
+        private void RemoveResult()
+        {
+            //TODO logick for remove vysledek
+        }
+
+
 
         private void LoadVeterinariVysledky()
         {

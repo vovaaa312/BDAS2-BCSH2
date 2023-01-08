@@ -18,9 +18,9 @@ namespace VetClinic.View
     /// <summary>
     /// Логика взаимодействия для Table1.xaml
     /// </summary>
-    public partial class Table1 : UserControl
+    public partial class VeterinariMazlicky : UserControl
     {
-        public Table1()
+        public VeterinariMazlicky()
         {
             InitializeComponent();
         }

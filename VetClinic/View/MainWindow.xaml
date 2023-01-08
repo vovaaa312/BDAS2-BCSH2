@@ -23,16 +23,16 @@
 
         <TabControl Grid.Column="1" Name="Tab1">
             
-            <TabItem Header="Tab1">
+            <TabItem Header="VeterinariMazlicky">
 
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                    <view:Table1 />
+                    <view:VeterinariMazlicky/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Tab2">
+            <TabItem Header="Faktury">
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
 
-                    <view:Table2/>
+                    <view:Faktury/>
                 </Grid>
             </TabItem>
             

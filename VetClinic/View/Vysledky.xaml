@@ -17,7 +17,7 @@
             <RowDefinition Height="650"/>
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariVysledky}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
+        <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariVysledky}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=Jmeno_mazlicek}" Header="Jmeno mazlicka" Width="100" />
                 <DataGridTextColumn Binding="{Binding Path=JeHotovy}" Header="Hotova" Width="100" />

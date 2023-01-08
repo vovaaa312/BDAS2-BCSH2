@@ -6,17 +6,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using VetClinic.Model;
 
 namespace VetClinic.ViewModel
 {
     public class VeterinariFakturyPoledViewModel
     {
+        FakturyWindowService fws = new FakturyWindowService();  
         public VeterinariFakturyPoledViewModel() {
             LoadVeterinariFaktury();
         }
 
         public ObservableCollection<VeterinariFakturyPohled> VeterinariFaktury{ get;set; }
+
+        private VeterinariFakturyPohled selectedItem;
+
+
+        public VeterinariFakturyPohled SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                selectedItem = value;
+            }
+        }
+
+        private ICommand _addFakturuCommand;
+        public ICommand AddFakturuCommand
+        {
+            get
+            {
+                return _addFakturuCommand ?? (_addFakturuCommand = new CommandHandler(() => AddFakturu(), true));
+            }
+        }
+
+
+
+        private void AddFakturu()
+        {
+            fws.CreateWindow();
+        }
+
+        private ICommand _removeFakturuCommand;
+        public ICommand RemoveFakturuCommand
+        {
+            get
+            {
+                return _removeFakturuCommand ?? (_removeFakturuCommand = new CommandHandler(() => RemoveFakturu(), true));
+            }
+        }
+
+
+
+        private void RemoveFakturu()
+        {
+            // TODO remove fakturu from list and from database
+        }
+
 
         public void LoadVeterinariFaktury(){
             ObservableCollection<VeterinariFakturyPohled> veterinariFaktury = new ObservableCollection<VeterinariFakturyPohled>();
