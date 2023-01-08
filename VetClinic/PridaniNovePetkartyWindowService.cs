@@ -80,8 +80,8 @@ namespace VetClinic
                     novaPetKartaCom.Parameters.Add("PSC_KOD", OracleDbType.Varchar2).Value = psc;
                     novaPetKartaCom.Parameters.Add("STAT", OracleDbType.Varchar2).Value = stat;
                     novaPetKartaCom.Parameters.Add("JMENO_MAZLICKA", OracleDbType.Varchar2).Value = jmeno_mazlicka;
-                    novaPetKartaCom.Parameters.Add("DRUH_ZVIRE", OracleDbType.Varchar2).Value = "Pes";
-                    novaPetKartaCom.Parameters.Add("NAZEV_ODDELENI", OracleDbType.Varchar2).Value = "Chirurgie";
+                    novaPetKartaCom.Parameters.Add("DRUH_ZVIRE", OracleDbType.Varchar2).Value = druh_zvire;
+                    novaPetKartaCom.Parameters.Add("NAZEV_ODDELENI", OracleDbType.Varchar2).Value = nazev_oddeleni;
                     novaPetKartaCom.Parameters.Add("NASTUP", OracleDbType.Date).Value = nastup;
                     novaPetKartaCom.Parameters.Add("VYSTUP", OracleDbType.Date).Value = propusteni;
 
@@ -90,7 +90,7 @@ namespace VetClinic
 
                     con.Close();
 
-
+                    CloseWindow();
                 }
                 catch (Exception ex) 
                 {

@@ -10,5 +10,10 @@ namespace VetClinic.Model
     {
         public string Jmeno { get; set; }
         public string PrimeniMajitele { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
