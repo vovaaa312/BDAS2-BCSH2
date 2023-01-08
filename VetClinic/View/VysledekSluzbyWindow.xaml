@@ -7,11 +7,11 @@
         xmlns:viewModel = "clr-namespace:VetClinic.ViewModel"
         mc:Ignorable="d"
         Title="VysledekSluzby" MaxHeight="600" MaxWidth="450" MinHeight="600" MinWidth="450">
-    
+
     <Window.DataContext>
         <viewModel:MainViewModel />
     </Window.DataContext>
-    
+
     <Grid>
         <Label Content="Jmeno" HorizontalAlignment="Left" Margin="109,50,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="jmenoTextBox" HorizontalAlignment="Center" Margin="0,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
@@ -33,6 +33,7 @@
         <TextBox HorizontalAlignment="Left" Margin="298,335,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="31,378,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="87,382,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Command="{Binding AddResultsCommand}" Content="Button" HorizontalAlignment="Left" Margin="128,516,0,0" VerticalAlignment="Top" Width="213" Height="33"/>
+        <Button Command="{Binding ConfirmResultsCommand}" Content="Button" HorizontalAlignment="Left" Margin="271,508,0,0" VerticalAlignment="Top" Width="126" Height="26"/>
+        <Button Command="{Binding BackToMainWindowFromAddResultsCommand}" Content="Back" Margin="60,508,310,50" />
     </Grid>
 </Window>

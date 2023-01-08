@@ -86,5 +86,29 @@ namespace VetClinic.Model
             return iw;
         }
 
+        public static VysledekSluzbyWindow GetVysledekSluzbyWindow()
+        {
+            VysledekSluzbyWindow iw = null;
+            foreach (Window window in windows)
+            {
+                if (window.GetType() == new VysledekSluzbyWindow().GetType())
+                {
+                    iw = (VysledekSluzbyWindow)window;
+                }
+            }
+            return iw;
+        }
+        public static FakturyWindow GetFakturyWindow()
+        {
+            FakturyWindow iw = null;
+            foreach (Window window in windows)
+            {
+                if (window.GetType() == new FakturyWindow().GetType())
+                {
+                    iw = (FakturyWindow)window;
+                }
+            }
+            return iw;
+        }
     }
 }
