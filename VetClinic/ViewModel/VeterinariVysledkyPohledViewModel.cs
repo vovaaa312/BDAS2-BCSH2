@@ -24,6 +24,21 @@ namespace VetClinic.ViewModel
             set;
         }
 
+        private VeterinariVysledkyPohled selectedItem;
+
+
+        public VeterinariVysledkyPohled SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                selectedItem = value;
+            }
+        }
+
 
         private ICommand _addResultsCommand;
         public ICommand AddResultsCommand
@@ -41,6 +56,21 @@ namespace VetClinic.ViewModel
             vsw.CreateWindow();
         }
 
+        private ICommand _removeResultCommand;
+        public ICommand RemoveResultCommand
+        {
+            get
+            {
+                return _removeResultCommand ?? (_removeResultCommand = new CommandHandler(() => RemoveResult(), true));
+            }
+        }
+
+
+
+        private void RemoveResult()
+        {
+            //TODO logick for remove vysledek
+        }
 
 
 

@@ -32,6 +32,25 @@ namespace VetClinic.ViewModel
             lw.CloseWindow();
         }
 
+
+        private ICommand _addNewResultsCommand;
+        public ICommand AddNewResultsCommand
+        {
+            get
+            {
+                return _addNewResultsCommand ?? (_addNewResultsCommand = new CommandHandler(() => AddNewResults(), canExecute()));
+            }
+        }
+
+        private void AddNewResults()
+        {
+            vsws.AddVysledek();
+        }
+
+
+
+
+
         private ICommand _addNewFakturaCommand;
         public ICommand AddNewFakturaCommand
         {
@@ -42,8 +61,8 @@ namespace VetClinic.ViewModel
         }
 
         private void AddNewFaktura()
-        {
-            // TODO FakturaWindow Add btn logic
+        {            
+            fws.AddFakturu();
         }
 
         private ICommand _backToMainWindowFromFakturyCommand;
@@ -72,6 +91,7 @@ namespace VetClinic.ViewModel
         private void AddNewPetCard1()
         {
             pnpv.AddPetcard();
+            new VeterinariMazlickyPohledViewModel().LoadVeterinariMazlicky();
         }
 
 

@@ -92,19 +92,12 @@
     <Compile Include="IWindowService.cs" />
     <Compile Include="LoginWindowService.cs" />
     <Compile Include="Model\ActualUser.cs" />
-    <Compile Include="Model\Adresa.cs" />
-    <Compile Include="Model\Faktura.cs" />
     <Compile Include="Model\ListOfWindows.cs" />
     <Compile Include="Model\LogList.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\VeterinariFakturyPohled.cs" />
     <Compile Include="Model\VeterinariMazlickyPohled.cs" />
-    <Compile Include="Model\Klinika.cs" />
-    <Compile Include="Model\Krev.cs" />
-    <Compile Include="Model\Majitel.cs" />
     <Compile Include="Model\Oddeleni.cs" />
-    <Compile Include="Model\PetKarta.cs" />
-    <Compile Include="Model\Veterinar.cs" />
     <Compile Include="Model\VeterinariVysledkyPohled.cs" />
     <Compile Include="Model\CommandHendler.cs" />
     <Compile Include="PridaniNovePetkartyBezMajiteleWindowService.cs" />
@@ -128,11 +121,11 @@
     <Compile Include="View\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Table1.xaml.cs">
-      <DependentUpon>Table1.xaml</DependentUpon>
+    <Compile Include="View\VeterinariMazlicky.xaml.cs">
+      <DependentUpon>VeterinariMazlicky.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Table2.xaml.cs">
-      <DependentUpon>Table2.xaml</DependentUpon>
+    <Compile Include="View\Faktury.xaml.cs">
+      <DependentUpon>Faktury.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VysledekSluzbyWindow.xaml.cs">
       <DependentUpon>VysledekSluzbyWindow.xaml</DependentUpon>
@@ -174,11 +167,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Table1.xaml">
+    <Page Include="View\VeterinariMazlicky.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Table2.xaml">
+    <Page Include="View\Faktury.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

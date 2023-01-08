@@ -20,6 +20,20 @@ namespace VetClinic.ViewModel
 
         public ObservableCollection<VeterinariFakturyPohled> VeterinariFaktury{ get;set; }
 
+        private VeterinariFakturyPohled selectedItem;
+
+
+        public VeterinariFakturyPohled SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                selectedItem = value;
+            }
+        }
 
         private ICommand _addFakturuCommand;
         public ICommand AddFakturuCommand
@@ -36,6 +50,7 @@ namespace VetClinic.ViewModel
         {
             fws.CreateWindow();
         }
+
         private ICommand _removeFakturuCommand;
         public ICommand RemoveFakturuCommand
         {

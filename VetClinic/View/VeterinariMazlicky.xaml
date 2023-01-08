@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="VetClinic.View.Table1"
+﻿<UserControl x:Class="VetClinic.View.VeterinariMazlicky"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -44,12 +44,10 @@
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width
-                                  ="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
+
             <Button Command="{Binding DeleteAnimalCommand}" Content="Smaz mazlicka" Grid.Column="3" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" />
-            <Button Content="Zobraz vysledky" Grid.Column="2" Height="30" Width="96" VerticalAlignment="Center" HorizontalAlignment="Center" />
             <Button Command="{Binding AddPetCard1Command}" Content="Pridat mazlicka" Grid.Column="0" Height="30" Width="96" VerticalAlignment="Center" HorizontalAlignment="Center" />
             <CheckBox Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40,0" />
             <Label Content="Nový Klient" Grid.Column="1" Margin="20,0,0,0" Height="30" Width="80" VerticalAlignment="Center" HorizontalAlignment="Left" />

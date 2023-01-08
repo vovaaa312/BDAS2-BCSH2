@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="VetClinic.View.Table2"
+﻿<UserControl x:Class="VetClinic.View.Faktury"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,7 +15,7 @@
             <RowDefinition Height="650"/>
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
-        <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariFaktury}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
+        <DataGrid Grid.Row="0" ItemsSource="{Binding VeterinariFaktury}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False" x:Name="senior" CanUserAddRows="False" CanUserDeleteRows="True" >
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="Jmeno_mazlicku1" Binding="{Binding Path=Nazev_sluzby}" Header="Nazev sluzby" Width="450" />
                 <DataGridTextColumn x:Name="Druh_zvire1" Binding="{Binding Path=Jmeno_mazlicek}" Header="Jmeno mazlicka" Width="100" />

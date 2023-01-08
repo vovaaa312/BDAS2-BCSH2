@@ -20,8 +20,8 @@ namespace VetClinic
             ListOfWindows.AddWindow(window);
         }
 
-        public void AddFakturu() { 
-            
+        public void AddFakturu() {
+            // TODO FakturaWindow add logic
         }
 
         public void CloseWindow()
