@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using VetClinic.Model;
 using Oracle.ManagedDataAccess.Client;
+using System.Windows.Controls;
 
 namespace VetClinic.ViewModel
 {
@@ -20,8 +21,9 @@ namespace VetClinic.ViewModel
 
         public MainViewModel() {
             LoadOddeleni();
-            LoadPosice();
             LoadDruhZvire();
+            LoadJmenaMazlicku();
+            LoadNazevSluzby();
         }
 
 
@@ -61,7 +63,7 @@ namespace VetClinic.ViewModel
         }
 
         private void AddNewFaktura()
-        {            
+        {
             fws.AddFakturu();
         }
 
@@ -111,7 +113,7 @@ namespace VetClinic.ViewModel
 
 
 
-       
+
 
         private ICommand _confirmLoginCommand;
         public ICommand ConfirmLoginCommand
@@ -224,7 +226,7 @@ namespace VetClinic.ViewModel
 
         private ObservableCollection<String> _druhZvire;
 
-        public ObservableCollection<String> DruhZvire 
+        public ObservableCollection<String> DruhZvire
         {
             get { return _druhZvire; }
             set { _druhZvire = value; }
@@ -236,6 +238,69 @@ namespace VetClinic.ViewModel
         {
             get { return _sdruhZvire; }
             set { _sdruhZvire = value; }
+        }
+
+        private ObservableCollection<JmenoMazlicka> _jmenoMazlicka;
+
+        public ObservableCollection<JmenoMazlicka> Jmen0Mazlicka
+        {
+            get { return _jmenoMazlicka; }
+            set { _jmenoMazlicka = value; }
+        }
+
+        private ObservableCollection<JmenoMazlicka> _sjmenoMazlicka;
+
+        public ObservableCollection<JmenoMazlicka> SJmenoMazlicka
+        {
+            get { return _sjmenoMazlicka; }
+            set { _sjmenoMazlicka = value; }
+        }
+
+        public ObservableCollection<JmenoMazlicka> mazlicky { get; set; }
+
+        private ObservableCollection<String> _nazevSluzby;
+
+        public ObservableCollection<String> NazevSluzby
+        {
+            get { return _nazevSluzby; }
+            set { _nazevSluzby = value; }
+        }
+
+        private String _snazevSluzby;
+
+        public String SNazevSluzby
+        {
+            get { return _snazevSluzby; }
+            set { _snazevSluzby = value; }
+        }
+
+        private void LoadNazevSluzby() {
+            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
+                        "user id=st64150;password=vova0107;" +
+                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
+
+            OracleConnection con = new OracleConnection(constr);
+            con.Open();
+
+            OracleCommand getAllZvire = new OracleCommand();
+            getAllZvire.Connection = con;
+            getAllZvire.CommandText = "SELECT NAZEV_SLUZBY FROM SLUZBY";
+            OracleDataReader reader = getAllZvire.ExecuteReader();
+
+
+            ObservableCollection<String> tmp = new ObservableCollection<String>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    NazevSluzby odd = new NazevSluzby { Nazev = reader["NAZEV_SLUZBY"].ToString() };
+
+                    tmp.Add(odd.Nazev);
+                    NazevSluzby = tmp;
+                }
+            }
+
+            con.Close();
         }
 
         private void LoadDruhZvire() 
@@ -268,10 +333,38 @@ namespace VetClinic.ViewModel
             con.Close();
         }
 
-        private void LoadPosice()
-        {
-            //TODO select all pozice, or do it with hands
+        private void LoadJmenaMazlicku() {
+            string constr = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fei-sql3.upceucebny.cz)(PORT=1521)))(CONNECT_DATA=(SID=BDAS)));" +
+                        "user id=st64150;password=vova0107;" +
+                        "Connection Timeout=120;Validate connection=true;Min Pool Size=4;";
+
+            OracleConnection con = new OracleConnection(constr);
+            con.Open();
+
+            OracleCommand getAllZvire = new OracleCommand();
+            getAllZvire.Connection = con;
+            getAllZvire.CommandText = "SELECT JMENO_MAZLICEK, PRIJMENI_MAJITEL FROM VETERINARI_MAZLICKY_VIEW";
+            OracleDataReader reader = getAllZvire.ExecuteReader();
+
+
+            ObservableCollection<JmenoMazlicka> tmp = new ObservableCollection<JmenoMazlicka>();
+            ObservableCollection<String> tmp2 = new ObservableCollection<String>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    JmenoMazlicka ma = new JmenoMazlicka { Jmeno = reader["JMENO_MAZLICEK"].ToString(),
+                                                           PrimeniMajitele = reader["PRIJMENI_MAJITEL"].ToString()
+                    };
+
+                    tmp.Add(ma);
+                    Jmen0Mazlicka = tmp;
+                }
+            }
+
+            con.Close();
         }
+
 
         private void LoadOddeleni()
         {
