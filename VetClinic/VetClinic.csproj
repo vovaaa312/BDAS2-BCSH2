@@ -92,8 +92,10 @@
     <Compile Include="IWindowService.cs" />
     <Compile Include="LoginWindowService.cs" />
     <Compile Include="Model\ActualUser.cs" />
+    <Compile Include="Model\JmenoMazlicka.cs" />
     <Compile Include="Model\ListOfWindows.cs" />
     <Compile Include="Model\LogList.cs" />
+    <Compile Include="Model\NazevSluzby.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\VeterinariFakturyPohled.cs" />
     <Compile Include="Model\VeterinariMazlickyPohled.cs" />
