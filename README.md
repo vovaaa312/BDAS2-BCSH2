@@ -1,1 +1,1 @@
-# SemestralniPraceB_Makarneko
+# BDAS2-BCSH2
